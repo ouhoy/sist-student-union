@@ -1,6 +1,8 @@
 $primary: #081024;
 $scondary: #b0dc51;
 $radius: 0;
+$input_height: 48px;
+
 * {
   margin: 0;
   padding: 0;
@@ -9,14 +11,61 @@ $radius: 0;
 
 body {
   font-family: "Poppins", sans-serif;
+  color: $primary;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 button {
-  height: 48px;
+  height: $input_height;
   padding: 16px 32px;
   font-weight: 500;
   font-size: 16px;
   color: white;
-  background-color: #081024;
+  background-color: $primary;
   outline: none;
   border: none;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  border-radius: $radius;
+}
+form {
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  button {
+    width: 100%;
+  }
+}
+input {
+  width: 400px;
+  height: $input_height;
+  color: $primary;
+  outline: none;
+  border: 2px solid #ebeaef;
+  padding-left: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.2s ease-in-out;
+  border-radius: $radius;
+}
+input:active,
+input:focus {
+  border-color: $primary;
+  outline: 1px solid $primary;
+}
+input:not(:last-child) {
+  margin-bottom: 16px;
+}
+label {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 8px;
 }

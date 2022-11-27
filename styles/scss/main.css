@@ -6,6 +6,12 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  color: #081024;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
@@ -17,4 +23,50 @@ button {
   background-color: #081024;
   outline: none;
   border: none;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  border-radius: 0;
+}
+
+form {
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+form button {
+  width: 100%;
+}
+
+input {
+  width: 400px;
+  height: 48px;
+  color: #081024;
+  outline: none;
+  border: 2px solid #ebeaef;
+  padding-left: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0;
+}
+
+input:active,
+input:focus {
+  border-color: #081024;
+  outline: 1px solid #081024;
+}
+
+input:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+label {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 8px;
 }/*# sourceMappingURL=main.css.map */
