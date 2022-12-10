@@ -26,6 +26,8 @@ nav {
   justify-content: space-between;
   position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   a {
     font-weight: 500;
     font-size: 16px;
@@ -58,6 +60,11 @@ h1 {
   letter-spacing: -0.04em;
   color: #151617;
 }
+h6 {
+  font-weight: 500;
+  font-size: 24px;
+  color: #151617;
+}
 p {
   letter-spacing: -0.04em;
   font-weight: 500;
@@ -81,10 +88,11 @@ button {
   border-radius: $radius;
 }
 header {
+  max-width: 1280px;
   margin-top: 144px;
+  margin-bottom: 40px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1280px;
   h1 {
     line-height: 64px;
     margin-bottom: 24px;
@@ -100,6 +108,18 @@ main {
   margin-right: auto;
   margin-left: auto;
   max-width: 1280px;
+  .article-body {
+    margin-top: 32px;
+    h6 {
+      line-height: 16px;
+      margin-bottom: 24px;
+    }
+    p {
+      max-width: 733px;
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
 }
 form {
   width: 400px;
