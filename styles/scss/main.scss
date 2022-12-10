@@ -14,11 +14,6 @@ $input_height: 48px;
 body {
   font-family: "Poppins", sans-serif;
   color: $body-color;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 nav {
   max-width: 1280px;
@@ -86,6 +81,10 @@ button {
   border-radius: $radius;
 }
 header {
+  margin-top: 144px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1280px;
   h1 {
     line-height: 64px;
     margin-bottom: 24px;
@@ -96,6 +95,11 @@ header {
     width: 624px;
     height: 48px;
   }
+}
+main {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1280px;
 }
 form {
   width: 400px;
