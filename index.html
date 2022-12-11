@@ -15,26 +15,30 @@
     <title>SIST Student Union</title>
   </head>
   <body>
-    <nav>
-      <div class="logo">
-        <img
-          src="./assets/images/SIST Events Logo.svg"
-          alt="SIST Events Logo"
-        />
-      </div>
-      <div class="links-holder">
-        <div class="links">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Blog</a>
-          <a href="#">Contact</a>
+    <div class="nav-container">
+      <nav>
+        <div class="logo">
+          <a href="#">
+            <img
+              src="./assets/images/SIST Events Logo.svg"
+              alt="SIST Events Logo"
+            />
+          </a>
         </div>
-        <div class="nav-cta">
-          <a href="#">Login</a>
-          <button>Create Events</button>
+        <div class="links-holder">
+          <div class="links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="nav-cta">
+            <a href="#">Login</a>
+            <button>Get Started</button>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <header>
       <h1>SIST Student Union Events</h1>
       <p>
@@ -51,6 +55,7 @@
           />
           <div class="article-body">
             <h6>SIST Outdoor Activity</h6>
+            <div class="evet-details"></div>
             <p>
               It is a renowned SIST tradition where you will be able to spend a
               day of competitive fun and memorable laughs, whilst getting to
@@ -58,7 +63,35 @@
             </p>
           </div>
         </article>
-        <div class="events-menu"></div>
+        <div class="events-menu">
+          <div class="upcoming-events">
+            <h4>Upcoming Events</h4>
+            <div is-active class="event">
+              <p>Monday</p>
+              <h6>SIST Outdoor Activity</h6>
+            </div>
+          </div>
+          <div class="previous-events">
+            <h4>Previous Events</h4>
+            <div class="event">
+              <p>Yesterday</p>
+              <h6>Halloween Party</h6>
+            </div>
+            <div class="event">
+              <p>Two days ago</p>
+              <h6>Football Game</h6>
+            </div>
+            <div class="event">
+              <p>Last Week</p>
+              <h6>Barid Al Maghrib Museum Visit</h6>
+            </div>
+            <div class="event">
+              <p>Two weeks ago</p>
+              <h6>Ping Pong Tournament</h6>
+            </div>
+          </div>
+          <button>Show more events</button>
+        </div>
       </div>
     </main>
   </body>
