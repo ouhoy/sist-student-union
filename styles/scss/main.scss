@@ -152,6 +152,7 @@ main {
       .event[is-active] {
         background-color: #ebeced;
       }
+
       .event {
         width: 406px;
         height: 88px;
@@ -184,6 +185,11 @@ main {
       button {
         width: 100%;
       }
+    }
+    .events-menu-onscroll {
+      position: fixed;
+      right: 120px;
+      top: 68px;
     }
   }
 }

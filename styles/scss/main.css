@@ -180,6 +180,11 @@ main .events-container .events-menu .upcoming-events {
 main .events-container .events-menu button {
   width: 100%;
 }
+main .events-container .events-menu-onscroll {
+  position: fixed;
+  right: 120px;
+  top: 68px;
+}
 
 form {
   width: 400px;
