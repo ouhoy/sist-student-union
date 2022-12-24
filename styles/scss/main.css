@@ -52,7 +52,7 @@ nav .links-holder .nav-cta a {
 }
 
 h1 {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 56px;
@@ -103,10 +103,7 @@ button:hover {
 
 header {
   max-width: 1280px;
-  margin-top: 56px;
-  margin-bottom: 40px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 56px auto 40px;
 }
 header h1 {
   line-height: 64px;
@@ -227,4 +224,68 @@ label {
   font-weight: 500;
   font-size: 14px;
   margin-bottom: 8px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+@media screen and (max-width: 1280px) {
+  nav {
+    max-width: 1040px;
+  }
+  header {
+    max-width: 1040px;
+  }
+  main {
+    max-width: 1040px;
+  }
+  main .events-container {
+    max-width: 1040px;
+  }
+  main .events-container img {
+    width: 683px;
+    height: 355px;
+  }
+  main .events-container .events-menu .event {
+    width: 325px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  h4 {
+    font-size: 24px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+  nav {
+    max-width: 896px;
+  }
+  header {
+    max-width: 896px;
+  }
+  main {
+    max-width: 896px;
+  }
+  main .events-container {
+    max-width: 896px;
+  }
+  main .events-container img {
+    width: 589px;
+    height: 303px;
+  }
+  main .events-container .events-menu h4 {
+    margin-bottom: 24px;
+    line-height: 24px;
+  }
+  main .events-container .events-menu p {
+    font-size: 14px;
+  }
+  main .events-container .events-menu .event {
+    width: 283px;
+    height: 64px;
+    padding: 8px 16px;
+    gap: 8px;
+  }
+  main .events-container .events-menu .upcoming-events {
+    margin-bottom: 24px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

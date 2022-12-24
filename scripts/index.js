@@ -1,3 +1,5 @@
-function $(id, slectAll = false) {
-  return slectAll ? document.querySelectorAll(id) : document.querySelector(id);
+function $(id, selectAll = false) {
+  return selectAll ? document.querySelectorAll(id) : document.querySelector(id);
 }
+
+

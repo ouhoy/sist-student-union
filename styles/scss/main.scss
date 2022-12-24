@@ -1,10 +1,11 @@
 $primary: #742ff6;
 $primary-hover: #682add;
-$scondary: #b0dc51;
+$secondary: #b0dc51;
 $body-color: #151617;
 $body-color-secondary: #2d3445;
 $radius: 8px;
 $input_height: 48px;
+$max-width: 1280px;
 
 * {
   margin: 0;
@@ -16,6 +17,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: $body-color;
 }
+
 .nav-container {
   width: 100%;
   background-color: white;
@@ -25,10 +27,11 @@ body {
   justify-content: center;
   border-bottom: 1px solid #c5c5c5;
 }
+
 nav {
   width: 100%;
   height: 88px;
-  max-width: 1280px;
+  max-width: $max-width;
   background-color: white;
   margin: 0 auto;
   // border-bottom: 1px solid $body-color;
@@ -42,17 +45,21 @@ nav {
     font-size: 16px;
     line-height: 16px;
   }
+
   .links-holder {
     display: flex;
     align-items: center;
     justify-content: center;
+
     .links {
       border-right: 1px solid #d7dce1;
       margin-right: 48px;
+
       a {
         margin-right: 40px;
       }
     }
+
     .nav-cta {
       a {
         margin-right: 48px;
@@ -62,7 +69,7 @@ nav {
 }
 
 h1 {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 56px;
@@ -70,25 +77,30 @@ h1 {
   letter-spacing: -0.04em;
   color: #151617;
 }
+
 h4 {
   font-size: 32px;
   line-height: 32px;
   font-weight: 500;
 }
+
 h6 {
   font-weight: 500;
   font-size: 24px;
   color: #151617;
 }
+
 p {
   letter-spacing: -0.04em;
   font-weight: 500;
   color: $body-color-secondary;
 }
+
 a {
   text-decoration: none;
   color: $body-color;
 }
+
 button {
   height: $input_height;
   padding: 16px 32px;
@@ -101,20 +113,21 @@ button {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   border-radius: $radius;
+
   &:hover {
     background-color: $primary-hover;
   }
 }
+
 header {
-  max-width: 1280px;
-  margin-top: 56px;
-  margin-bottom: 40px;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: $max-width;
+  margin: 56px auto 40px;
+
   h1 {
     line-height: 64px;
     margin-bottom: 24px;
   }
+
   p {
     font-size: 16px;
     line-height: 24px;
@@ -122,33 +135,40 @@ header {
     height: 48px;
   }
 }
+
 main {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1280px;
+  max-width: $max-width;
+
   .events-container {
-    max-width: 1280px;
+    max-width: $max-width;
     display: flex;
     justify-content: space-between;
 
+
     .article-body {
       margin-top: 32px;
+
       h6 {
         line-height: 16px;
         margin-bottom: 16px;
       }
+
       p {
         max-width: 733px;
         font-size: 16px;
         line-height: 21px;
       }
     }
+
     .events-menu {
       h4 {
         margin-bottom: 24px;
         line-height: 32px;
         color: #151617;
       }
+
       .event[is-active] {
         background-color: #ebeced;
       }
@@ -168,24 +188,30 @@ main {
         cursor: pointer;
         transition: all 0.2s ease-in-out;
         border-radius: $radius;
+
         &:hover {
           background-color: #ebeced;
         }
+
         p {
           line-height: 16px;
           // margin-bottom: 16px;
         }
+
         h6 {
           line-height: 24px;
         }
       }
+
       .upcoming-events {
         margin-bottom: 40px;
       }
+
       button {
         width: 100%;
       }
     }
+
     .events-menu-onscroll {
       position: fixed;
       right: 120px;
@@ -193,6 +219,7 @@ main {
     }
   }
 }
+
 form {
   width: 400px;
   height: 500px;
@@ -201,10 +228,12 @@ form {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+
   button {
     width: 100%;
   }
 }
+
 input {
   width: 400px;
   height: $input_height;
@@ -218,16 +247,104 @@ input {
   transition: all 0.2s ease-in-out;
   border-radius: $radius;
 }
+
 input:active,
 input:focus {
   border-color: $primary;
   outline: 1px solid $primary;
 }
+
 input:not(:last-child) {
   margin-bottom: 16px;
 }
+
 label {
   font-weight: 500;
   font-size: 14px;
   margin-bottom: 8px;
+}
+
+@media screen and (max-width: 1280px) {
+  $max-width: 1040px;
+
+  nav {
+    max-width: $max-width;
+  }
+  header {
+    max-width: $max-width;
+  }
+  main {
+    max-width: $max-width;
+
+    .events-container {
+
+      max-width: $max-width;
+
+      img {
+        width: 683px;
+        height: 355px;
+      }
+
+      .events-menu {
+        .event {
+          width: 325px;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  h4 {
+    font-size: 24px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+
+  $max-width: 896px;
+
+  nav {
+    max-width: $max-width;
+  }
+  header {
+    max-width: $max-width;
+  }
+  main {
+    max-width: $max-width;
+
+    .events-container {
+
+      max-width: $max-width;
+
+      img {
+        width: 589px;
+        height: 303px;
+      }
+
+      .events-menu {
+        h4 {
+          margin-bottom: 24px;
+          line-height: 24px;
+
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        .event {
+          width: 283px;
+          height: 64px;
+          padding: 8px 16px;
+          gap: 8px;
+        }
+         .upcoming-events {
+        margin-bottom: 24px;
+      }
+      }
+    }
+  }
+
 }
