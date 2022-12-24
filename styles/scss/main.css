@@ -279,7 +279,7 @@ label {
   }
   main .events-container .events-menu .event {
     width: 283px;
-    height: 64px;
+    height: 100%;
     padding: 8px 16px;
     gap: 8px;
   }
