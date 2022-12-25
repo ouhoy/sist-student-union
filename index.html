@@ -20,13 +20,14 @@
         <div class="logo">
           <a href="#">
             <img
-              src="./assets/images/SIST Events Logo.svg"
+              src="./assets/icons/SIST Events Logo.svg"
               alt="SIST Events Logo"
             />
+            <h6 class="logo-title">SIST events</h6>
           </a>
         </div>
         <div class="links-holder">
-          <div class="links">
+          <div class="links hide-for-tablet">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Blog</a>
@@ -35,6 +36,9 @@
           <div class="nav-cta">
             <a href="#">Login</a>
             <button>Get Started</button>
+          </div>
+          <div class="ham-menu show-for-tablet">
+            <img src="assets/icons/ham-menu.svg">
           </div>
         </div>
       </nav>
@@ -63,7 +67,13 @@
             </p>
           </div>
         </article>
-        <div class="events-menu">
+        <div class="events-menu-container">
+          <div class="event-btn event-btn-reshape">
+            <p>Show Events</p>
+            <img class="rotate" src="./assets/icons/chevron-down.svg" alt="chevron-down" >
+          </div>
+        <div class="events-menu hidden">
+
           <div class="upcoming-events">
             <h4>Upcoming Events</h4>
             <div is-active class="event">
@@ -93,6 +103,7 @@
           <button>Show more events</button>
         </div>
       </div>
+        </div>
     </main>
   </body>
 </html>
