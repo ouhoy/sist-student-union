@@ -80,7 +80,7 @@ button:hover {
 nav {
   width: 95%;
   height: 88px;
-  max-width: 1280px;
+  max-width: 940px;
   background-color: white;
   margin: 0 auto;
   display: flex;
@@ -115,23 +115,57 @@ nav .links-holder .nav-cta a {
   margin-right: 40px;
 }
 nav .links-holder .nav-cta button {
-  width: 128px;
+  width: 150px;
 }
 
 header {
-  max-width: 1280px;
+  height: 70dvh;
+  max-width: 940px;
   margin: 56px auto 40px;
   width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  gap: 48px;
 }
 header h1 {
+  font-weight: 500;
+  font-size: 56px;
+  text-align: center;
   line-height: 64px;
-  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+  color: #151617;
 }
 header p {
-  font-size: 16px;
+  width: 636px;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
   line-height: 24px;
-  width: 624px;
-  height: 48px;
+}
+header .head-cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+}
+header .head-cta button {
+  height: 40px;
+  width: 150px;
+}
+header .head-cta a {
+  padding: 8px 32px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.04em;
+  color: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
 }
 
 .event-btn {
@@ -142,10 +176,10 @@ main {
   margin-right: auto;
   margin-left: auto;
   width: 95%;
-  max-width: 1280px;
+  max-width: 940px;
 }
 main .events-container {
-  max-width: 1280px;
+  max-width: 940px;
   display: flex;
   justify-content: space-between;
 }
@@ -169,14 +203,18 @@ main .events-container .events-menu {
 }
 main .events-container .events-menu h4 {
   margin-bottom: 24px;
+  font-size: 24px;
   line-height: 32px;
+  letter-spacing: -0.04em;
   color: #151617;
 }
 main .events-container .events-menu .event[is-active] {
   background-color: #ebeced;
 }
 main .events-container .events-menu .event {
-  width: 406px;
+  width: 280px;
+  min-height: 64px;
+  padding: 8px;
   margin-bottom: 16px;
   background-color: white;
   border: 2px solid #151617;
@@ -185,13 +223,13 @@ main .events-container .events-menu .event {
   justify-content: center;
   align-items: flex-start;
   gap: 8px;
-  padding: 16px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
 }
 main .events-container .events-menu .event h6 {
-  width: 374px;
+  width: 224px;
+  font-size: 16px;
   line-height: 24px;
 }
 main .events-container .events-menu .event:hover {
@@ -259,42 +297,6 @@ label {
   margin-bottom: 8px;
 }
 
-@media screen and (max-width: 1280px) {
-  nav {
-    max-width: 1040px;
-  }
-  header {
-    max-width: 1040px;
-  }
-  main {
-    max-width: 1040px;
-  }
-  main .events-container {
-    max-width: 1040px;
-  }
-  main .events-container .article-body {
-    margin-top: 32px;
-  }
-  main .events-container .article-body h6 {
-    line-height: 16px;
-    margin-bottom: 16px;
-  }
-  main .events-container .article-body p {
-    max-width: 683px;
-    font-size: 16px;
-    line-height: 21px;
-  }
-  main .events-container .events-menu {
-    margin-left: 32px;
-  }
-  main .events-container .events-menu .event {
-    width: 325px;
-  }
-  main .events-container .events-menu .event h6 {
-    width: 306px;
-    line-height: 24px;
-  }
-}
 @media screen and (max-width: 1024px) {
   h4 {
     font-size: 24px;
