@@ -48,6 +48,7 @@ p {
 a {
   text-decoration: none;
   color: #151617;
+  cursor: pointer;
 }
 
 button {
@@ -56,7 +57,7 @@ button {
   font-weight: 500;
   font-size: 16px;
   color: white;
-  background-color: #742ff6;
+  background-color: #78B42B;
   outline: none;
   border: none;
   cursor: pointer;
@@ -64,7 +65,7 @@ button {
   border-radius: 32px;
 }
 button:hover {
-  background-color: #682add;
+  background-color: #70AA27;
 }
 
 .nav-container {
@@ -247,8 +248,7 @@ main .events-container .events-menu-onscroll {
 }
 
 form {
-  width: 400px;
-  height: 500px;
+  width: 280px;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
@@ -257,17 +257,18 @@ form {
 }
 form button {
   width: 100%;
+  border-radius: 8px;
 }
 
 input {
-  width: 400px;
-  height: 48px;
+  width: 100%;
+  height: 40px;
   color: #151617;
   outline: none;
-  border: 2px solid #ebeaef;
-  padding-left: 16px;
+  border: 1px solid #DBDBDB;
+  padding-left: 8px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
@@ -275,8 +276,7 @@ input {
 
 input:active,
 input:focus {
-  border-color: #742ff6;
-  outline: 1px solid #742ff6;
+  border: 2px solid #78B42B;
 }
 
 input:not(:last-child) {
@@ -285,8 +285,73 @@ input:not(:last-child) {
 
 label {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13.33px;
   margin-bottom: 8px;
+  color: #3D3D3D;
+}
+
+.form-page-container {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-page-container .form-greeting {
+  background-color: #295BA7;
+  min-width: 470px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
+.form-page-container .form-greeting .home-page-btn {
+  width: 334px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.form-page-container .form-greeting .home-page-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 40px;
+  background-color: white;
+  border-radius: 32px;
+}
+.form-page-container .form-greeting h4 {
+  width: 334px;
+  line-height: 40px;
+  color: white;
+}
+.form-page-container .form-container {
+  min-width: 470px;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 48px;
+}
+.form-page-container .form-container .form-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.form-page-container .form-container .form-title h6 {
+  width: 82px;
+  font-weight: 600;
+  color: #212121;
+}
+.form-page-container .form-container .form-title a {
+  font-size: 14px;
+  color: #295BA7;
+  font-weight: 500;
+  text-decoration-line: underline;
 }
 
 @media screen and (max-width: 1024px) {

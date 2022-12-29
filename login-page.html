@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+            rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/scss/main.css" />
+    <link rel="stylesheet" href="./styles/scss/main.css"/>
     <script src="./scripts/index.js" defer></script>
     <title>Login</title>
 </head>
 <body>
-  <form>
-
-  </form>
+<div class="form-page-container">
+    <div class="form-greeting">
+        <div class="home-page-btn">
+            <a href="./index.html">
+            <img src="./assets/icons/arrow-sm-left.svg" alt="An arrow to navigate to the home page" >
+        </a>
+        </div>
+        <h4>Welcome back to SIST student union events' portal :)</h4>
+    </div>
+    <div class="form-container">
+        <a href="./index.html" title="Navigate to the home page."><img src="./assets/icons/SIST%20logo.svg" alt=""></a>
+        <form>
+            <div class="form-title">
+                <h6>Sign in</h6>
+                <a>I don’t have an account</a>
+            </div>
+            <label for="username">Username</label>
+            <input id="username" placeholder="Enter your username">
+            <label for="password">Password</label>
+            <input id="password" placeholder="Enter your password">
+            <button>Sign in</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>

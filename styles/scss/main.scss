@@ -1,10 +1,10 @@
-$primary: #742ff6;
-$primary-hover: #682add;
-$secondary: #b0dc51;
+$primary: #78B42B;
+$primary-hover: #70AA27;
+$secondary: #295BA7;
 $body-color: #151617;
 $body-color-secondary: #2d3445;
 $radius: 8px;
-$input_height: 48px;
+$input_height: 40px;
 $max-width: 940px;
 
 * {
@@ -16,6 +16,7 @@ $max-width: 940px;
 body {
   font-family: "Poppins", sans-serif;
   color: $body-color;
+  //max-width: $max-width;
 }
 
 .rotate {
@@ -57,6 +58,7 @@ p {
 a {
   text-decoration: none;
   color: $body-color;
+  cursor: pointer;
 }
 
 button {
@@ -299,9 +301,10 @@ main {
   }
 }
 
+
 form {
-  width: 400px;
-  height: 500px;
+  width: 280px;
+  //height: 500px;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
@@ -310,27 +313,29 @@ form {
 
   button {
     width: 100%;
+    border-radius: $radius;
   }
 }
 
 input {
-  width: 400px;
+  width: 100%;
   height: $input_height;
   color: $body-color;
   outline: none;
-  border: 2px solid #ebeaef;
-  padding-left: 16px;
+  border: 1px solid #DBDBDB;
+  padding-left: 8px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   transition: all 0.2s ease-in-out;
   border-radius: $radius;
+
 }
 
 input:active,
 input:focus {
-  border-color: $primary;
-  outline: 1px solid $primary;
+  //border-color: $primary;
+  border: 2px solid $primary;
 }
 
 input:not(:last-child) {
@@ -339,10 +344,84 @@ input:not(:last-child) {
 
 label {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13.33px;
   margin-bottom: 8px;
+  color: #3D3D3D;
 }
 
+.form-page-container {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  .form-greeting {
+    background-color: #295BA7;
+    min-width: 470px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+
+    .home-page-btn {
+      width: 334px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 40px;
+        background-color: white;
+        border-radius: 32px;
+
+      }
+    }
+
+    h4 {
+      width: 334px;
+      line-height: 40px;
+      color: white;
+    }
+  }
+
+  .form-container {
+    min-width: 470px;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 48px;
+
+    .form-title {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+
+      h6 {
+        width: 82px;
+        font-weight: 600;
+        color: #212121;
+      }
+
+      a {
+        font-size: 14px;
+        color: $secondary;
+        font-weight: 500;
+        text-decoration-line: underline;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 1024px) {
   h4 {
