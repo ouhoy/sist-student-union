@@ -84,7 +84,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #c5c5c5;
+  //border-bottom: 1px solid #c5c5c5;
 }
 
 nav {
@@ -145,12 +145,10 @@ header {
   height: 70dvh;
   max-width: $max-width;
   margin: 56px auto 40px;
-  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0px;
   gap: 48px;
 
   h1 {
@@ -178,7 +176,6 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px;
     gap: 8px;
 
     button {
@@ -188,7 +185,6 @@ header {
 
     a {
       padding: 8px 32px;
-      font-family: 'Poppins';
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
@@ -207,7 +203,6 @@ header {
 main {
   margin-right: auto;
   margin-left: auto;
-  width: 95%;
   max-width: $max-width;
 
 
@@ -253,16 +248,16 @@ main {
       .event {
 
         h6 {
-          width: 224px;
           font-size: 16px;
           line-height: 24px;
+          letter-spacing: -0.04em;
+
 
         }
 
         width: 280px;
         min-height: 64px;
-        padding: 8px;
-        //min-height: 88px;
+        padding: 8px 16px;
         margin-bottom: 16px;
         background-color: white;
         border: 2px solid #151617;
@@ -280,13 +275,10 @@ main {
         }
 
         p {
+          font-size: 14px;
           line-height: 16px;
-          // margin-bottom: 16px;
         }
 
-        h6 {
-          line-height: 24px;
-        }
       }
 
       .upcoming-events {

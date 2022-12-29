@@ -74,7 +74,6 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #c5c5c5;
 }
 
 nav {
@@ -122,12 +121,10 @@ header {
   height: 70dvh;
   max-width: 940px;
   margin: 56px auto 40px;
-  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0px;
   gap: 48px;
 }
 header h1 {
@@ -149,7 +146,6 @@ header .head-cta {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
   gap: 8px;
 }
 header .head-cta button {
@@ -158,7 +154,6 @@ header .head-cta button {
 }
 header .head-cta a {
   padding: 8px 32px;
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -175,7 +170,6 @@ header .head-cta a {
 main {
   margin-right: auto;
   margin-left: auto;
-  width: 95%;
   max-width: 940px;
 }
 main .events-container {
@@ -214,7 +208,7 @@ main .events-container .events-menu .event[is-active] {
 main .events-container .events-menu .event {
   width: 280px;
   min-height: 64px;
-  padding: 8px;
+  padding: 8px 16px;
   margin-bottom: 16px;
   background-color: white;
   border: 2px solid #151617;
@@ -228,18 +222,16 @@ main .events-container .events-menu .event {
   border-radius: 8px;
 }
 main .events-container .events-menu .event h6 {
-  width: 224px;
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: -0.04em;
 }
 main .events-container .events-menu .event:hover {
   background-color: #ebeced;
 }
 main .events-container .events-menu .event p {
+  font-size: 14px;
   line-height: 16px;
-}
-main .events-container .events-menu .event h6 {
-  line-height: 24px;
 }
 main .events-container .events-menu .upcoming-events {
   margin-bottom: 40px;
