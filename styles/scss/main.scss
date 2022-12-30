@@ -1,5 +1,8 @@
 $primary: #78B42B;
+$primary-light: #F2F8EA;
+$primary-light-hover: #EBF4DF;
 $primary-hover: #70AA27;
+$primary-darker: #2A3F0F;
 $secondary: #295BA7;
 $body-color: #151617;
 $body-color-secondary: #2d3445;
@@ -37,6 +40,13 @@ h1 {
   color: #151617;
 }
 
+h2 {
+  font-family: 'Poppins';
+  font-size: 48px;
+  font-weight: 500;
+
+}
+
 h4 {
   font-size: 32px;
   line-height: 32px;
@@ -64,6 +74,7 @@ a {
 button {
   height: 40px;
   padding: 8px 16px;
+  font-family: 'Poppins';
   font-weight: 500;
   font-size: 16px;
   color: white;
@@ -77,6 +88,16 @@ button {
   &:hover {
     background-color: $primary-hover;
   }
+}
+
+.secondary-btn {
+  color: $primary-darker;
+  background: $primary-light;
+
+  &:hover {
+    background-color: $primary-light-hover;
+  }
+
 }
 
 .nav-container {
@@ -434,10 +455,31 @@ label {
   max-width: $max-width;
   margin: 48px auto;
 
-  h1 {
+  h2 {
+    color: #212121;
     margin-bottom: 56px;
   }
 
+  .events-controller {
+    width: 100%;
+    //padding-bottom: 24px;
+    //border-bottom: 1px solid #F3F3F3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+
+    button {
+
+      padding: 8px 32px;
+      line-height: 16px;
+      font-weight: 500;
+
+    }
+
+
+  }
 
   .event {
     height: 128px;

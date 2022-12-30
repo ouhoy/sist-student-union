@@ -27,6 +27,12 @@ h1 {
   color: #151617;
 }
 
+h2 {
+  font-family: "Poppins";
+  font-size: 48px;
+  font-weight: 500;
+}
+
 h4 {
   font-size: 32px;
   line-height: 32px;
@@ -54,6 +60,7 @@ a {
 button {
   height: 40px;
   padding: 8px 16px;
+  font-family: "Poppins";
   font-weight: 500;
   font-size: 16px;
   color: white;
@@ -66,6 +73,14 @@ button {
 }
 button:hover {
   background-color: #70AA27;
+}
+
+.secondary-btn {
+  color: #2A3F0F;
+  background: #F2F8EA;
+}
+.secondary-btn:hover {
+  background-color: #EBF4DF;
 }
 
 .nav-container {
@@ -363,8 +378,22 @@ label {
   max-width: 940px;
   margin: 48px auto;
 }
-.events-page-container h1 {
+.events-page-container h2 {
+  color: #212121;
   margin-bottom: 56px;
+}
+.events-page-container .events-controller {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.events-page-container .events-controller button {
+  padding: 8px 32px;
+  line-height: 16px;
+  font-weight: 500;
 }
 .events-page-container .event {
   height: 128px;
