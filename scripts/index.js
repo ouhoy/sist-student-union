@@ -9,6 +9,8 @@ const events = $(".event", true)
 const articleTitle = $(".article-body-title")
 
 window.onload = function () {
+    const currentPage = window.location.href.split("/")[4]
+    if (currentPage !== "index.html") return
     const eventId = window.location.hash.split("-").at(-1)
     if (eventId !== "") {
         const linkedEvent = document.getElementById(eventId)
@@ -26,7 +28,7 @@ showEventsBtn.addEventListener("click", function () {
 
 
 function setEventsMenu(target) {
-     articleTitle.textContent = target.querySelector("h6").textContent
+    articleTitle.textContent = target.querySelector("h6").textContent
 
     const eventTitle = target.querySelector("h6").textContent.replaceAll(" ", "-").toLowerCase()
     window.location.hash = eventTitle + "-" + target.id;
@@ -48,3 +50,4 @@ eventsMenu.addEventListener("click", function (e) {
     })
     selectedEvent.setAttribute("is-active", "")
 })
+
