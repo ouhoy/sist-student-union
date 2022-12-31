@@ -11,7 +11,7 @@
             rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/scss/main.css"/>
-    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/events.js" defer></script>
     <title>SIST Events</title>
 </head>
 <body>
@@ -49,20 +49,39 @@
         <button>Upcoming</button>
         <button class="secondary-btn">Previous</button>
     </div>
-    <a is-pending="true" href="#">
-        <div class="event">
-            <div class="event-date">
-                <p class="day">5</p>
-                <p class="month">Sept</p>
+    <div class="upcoming">
+
+        <a href="#">
+            <div class="event">
+                <div class="event-date">
+                    <p class="day">5</p>
+                    <p class="month">Sept</p>
+                </div>
+                <div class="event-details">
+                    <p class="event-title">
+                        l media platforms have different character limits for their profiles, messages, and status updates.
+                    </p>
+                    <p class="event-author">By someone</p>
+                </div>
             </div>
-            <div class="event-details">
-                <p class="event-title">
-                    l media platforms have different character limits for their profiles, messages, and status updates.
-                </p>
-                <p class="event-author">By someone</p>
+        </a>
+    </div>
+    <div class="previous hide">
+                <a href="#">
+            <div class="event">
+                <div class="event-date">
+                    <p class="day">12</p>
+                    <p class="month">May</p>
+                </div>
+                <div class="event-details">
+                    <p class="event-title">
+                        l media platforms have different character limits for their profiles, messages, and status updates.
+                    </p>
+                    <p class="event-author">By ablacode</p>
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
+    </div>
 </div>
 </body>
 </html>

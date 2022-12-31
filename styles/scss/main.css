@@ -28,7 +28,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-weight: 500;
 }
@@ -60,7 +60,7 @@ a {
 button {
   height: 40px;
   padding: 8px 16px;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: white;
@@ -74,6 +74,10 @@ button {
 button:hover {
   background-color: #70AA27;
 }
+button:active {
+  background-color: #609022;
+  transform: scale(0.99);
+}
 
 .secondary-btn {
   color: #2A3F0F;
@@ -81,6 +85,13 @@ button:hover {
 }
 .secondary-btn:hover {
   background-color: #EBF4DF;
+}
+.secondary-btn:active {
+  background-color: #D5E8BD;
+}
+
+.hide {
+  display: none;
 }
 
 .nav-container {
@@ -249,6 +260,9 @@ main .events-container .events-menu .event h6 {
 main .events-container .events-menu .event:hover {
   background-color: #ebeced;
 }
+main .events-container .events-menu .event:active {
+  transform: scale(0.99);
+}
 main .events-container .events-menu .event p {
   font-size: 14px;
   line-height: 16px;
@@ -403,6 +417,7 @@ label {
   border-radius: 8px;
   border: 1px solid #E0E0E0;
   gap: 24px;
+  transition: all 0.2s ease-in-out;
 }
 .events-page-container .event .event-date {
   min-width: 160px;
@@ -438,6 +453,14 @@ label {
   line-height: 24px;
   color: #151617;
 }
+.events-page-container .event .event-details .event-title:hover {
+  color: #255296;
+  transition: all 0.2s ease-in-out;
+}
+.events-page-container .event .event-details .event-title:active {
+  color: #214986;
+  transition: all 0.2s ease-in-out;
+}
 .events-page-container .event .event-details .event-author {
   margin-top: 8px;
   color: #ADADAD;
@@ -446,6 +469,13 @@ label {
 .events-page-container .event:hover .event-title {
   color: #295BA7;
   transition: all 0.2s ease-in-out;
+}
+.events-page-container .event:active .event-title {
+  color: #214986;
+  transition: all 0.2s ease-in-out;
+}
+.events-page-container .event:active {
+  transform: scale(0.99);
 }
 
 @media screen and (max-width: 1024px) {

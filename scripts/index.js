@@ -7,13 +7,13 @@ const showEventsBtn = $(".event-btn")
 const events = $(".event", true)
 // const articleBody = $(".article-body")
 const articleTitle = $(".article-body-title")
-const eventController = $(".events-controller")
 
-const currentPage = window.location.href.split("/")[4]
+
 
 window.onload = function () {
-    if (currentPage !== "index.html") return
+
     const eventId = window.location.hash.split("-").at(-1)
+    // TODO: 1) If not event id return
     if (eventId !== "") {
         const linkedEvent = document.getElementById(eventId)
         return setEventsMenu(linkedEvent)
@@ -23,7 +23,6 @@ window.onload = function () {
 }
 
 showEventsBtn.addEventListener("click", function () {
-    if (currentPage == "events.html") return
     this.classList.toggle("event-btn-reshape")
     eventsMenu.classList.toggle("hidden")
     showEventsBtn.querySelector("img").classList.toggle("rotate")
@@ -32,7 +31,6 @@ showEventsBtn.addEventListener("click", function () {
 
 function setEventsMenu(target) {
     articleTitle.textContent = target.querySelector("h6").textContent
-
     const eventTitle = target.querySelector("h6").textContent.replaceAll(" ", "-").toLowerCase()
     window.location.hash = eventTitle + "-" + target.id;
     events.forEach(el => {
@@ -42,7 +40,6 @@ function setEventsMenu(target) {
 }
 
 eventsMenu.addEventListener("click", function (e) {
-    if (currentPage == "events.html") return
     const selectedEvent = e.target.closest(".event");
     if (!selectedEvent || selectedEvent.hasAttribute("is-active")) return;
     articleTitle.textContent = selectedEvent.querySelector("h6").textContent
@@ -55,11 +52,3 @@ eventsMenu.addEventListener("click", function (e) {
     selectedEvent.setAttribute("is-active", "")
 })
 
-eventController.addEventListener("click", function (e) {
-    if (currentPage !== "events.html") return
-    if (e.target.closest("button")) {
-        eventController.querySelectorAll("button").forEach(el => el.classList.toggle("secondary-btn"))
-
-
-    }
-})
