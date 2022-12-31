@@ -343,6 +343,15 @@ main {
       button {
         width: 100%;
         border-radius: $radius;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
 
@@ -356,8 +365,8 @@ main {
 
 
 form {
-  width: 280px;
-  //height: 500px;
+  width: 400px;
+
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
@@ -377,7 +386,7 @@ input {
   height: $input_height;
   color: $body-color;
   outline: none;
-  border: 1px solid #DBDBDB;
+  border: 2px solid #DBDBDB;
   padding-left: 8px;
   font-weight: 500;
   font-size: 14px;
@@ -389,8 +398,8 @@ input {
 
 input:active,
 input:focus {
-  //border-color: $primary;
   border: 2px solid $primary;
+  outline: 4px solid $primary-light-hover;
 }
 
 input:not(:last-child) {
@@ -401,7 +410,7 @@ label {
   font-weight: 500;
   font-size: 13.33px;
   margin-bottom: 8px;
-  color: #3D3D3D;
+  color: #313234;
 }
 
 .form-page-container {
@@ -410,41 +419,6 @@ label {
   align-items: center;
   justify-content: center;
 
-
-  .form-greeting {
-    background-color: #295BA7;
-    min-width: 470px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 24px;
-
-    .home-page-btn {
-      width: 334px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-
-      a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 64px;
-        height: 40px;
-        background-color: white;
-        border-radius: 32px;
-
-      }
-    }
-
-    h4 {
-      width: 334px;
-      line-height: 40px;
-      color: white;
-    }
-  }
 
   .form-container {
     min-width: 470px;
@@ -474,6 +448,13 @@ label {
         font-weight: 500;
         text-decoration-line: underline;
       }
+    }
+
+    .forgot-password {
+      margin: 8px auto 0 auto;
+      font-size: 14px;
+      font-weight: 500;
+      color: #3D3D3D;
     }
   }
 }
