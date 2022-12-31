@@ -5,7 +5,8 @@ function $(id, selectAll = false) {
 const eventController = $(".events-controller")
 
 eventController.addEventListener("click", function (e) {
-    if (e.target.closest("button")) {
+    const selectedBtn = e.target.closest("button")
+    if (selectedBtn && selectedBtn.classList.contains("secondary-btn")) {
         eventController.querySelectorAll("button").forEach(el => el.classList.toggle("secondary-btn"))
         $(".upcoming").classList.toggle("hide")
         $(".previous").classList.toggle("hide")
