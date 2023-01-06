@@ -387,7 +387,7 @@ input {
   color: $body-color;
   outline: none;
   border: 2px solid #DBDBDB;
-  padding-left: 8px;
+  padding-left: 16px;
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
@@ -491,6 +491,7 @@ label {
 
   .event {
     height: 128px;
+    margin-bottom: 24px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
