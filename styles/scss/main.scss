@@ -376,7 +376,7 @@ form {
   button {
     width: 100%;
     height: 48px;
-    border-radius: $radius;
+    border-radius: 32px;
 
   }
 }
@@ -394,6 +394,11 @@ input {
   transition: all 0.2s ease-in-out;
   border-radius: $radius;
 
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
 }
 
 input:active,
@@ -450,11 +455,58 @@ label {
       }
     }
 
-    .forgot-password {
-      margin: 8px auto 0 auto;
-      font-size: 14px;
-      font-weight: 500;
-      color: #3D3D3D;
+    .form-section {
+
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+
+      input[type="checkbox"] {
+        margin: 0;
+      }
+
+      .form-check {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+
+        label {
+          margin: 0;
+          color: #313234;
+        }
+      }
+
+      .forgot-password {
+        font-size: 14px;
+        font-weight: 500;
+        color: #366CE2;
+      }
+    }
+
+    .create-account {
+      width: 100%;
+      height: 104px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 16px;
+
+      p {
+        width: 189px;
+        height: 16px;
+      }
+
+      button {
+        background-color: white;
+        color: $primary;
+        border: 2px solid $primary;
+      }
+
     }
   }
 }

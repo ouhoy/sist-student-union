@@ -299,7 +299,7 @@ form {
 form button {
   width: 100%;
   height: 48px;
-  border-radius: 8px;
+  border-radius: 32px;
 }
 
 input {
@@ -314,6 +314,11 @@ input {
   line-height: 24px;
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
+}
+
+input[type=checkbox] {
+  width: 16px;
+  height: 16px;
 }
 
 input:active,
@@ -366,11 +371,48 @@ label {
   font-weight: 500;
   text-decoration-line: underline;
 }
-.form-page-container .form-container .forgot-password {
-  margin: 8px auto 0 auto;
+.form-page-container .form-container .form-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.form-page-container .form-container .form-section input[type=checkbox] {
+  margin: 0;
+}
+.form-page-container .form-container .form-section .form-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.form-page-container .form-container .form-section .form-check label {
+  margin: 0;
+  color: #313234;
+}
+.form-page-container .form-container .form-section .forgot-password {
   font-size: 14px;
   font-weight: 500;
-  color: #3D3D3D;
+  color: #366CE2;
+}
+.form-page-container .form-container .create-account {
+  width: 100%;
+  height: 104px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+}
+.form-page-container .form-container .create-account p {
+  width: 189px;
+  height: 16px;
+}
+.form-page-container .form-container .create-account button {
+  background-color: white;
+  color: #78B42B;
+  border: 2px solid #78B42B;
 }
 
 .events-page-container {

@@ -22,14 +22,25 @@
         <form>
             <div class="form-title">
                 <h6>Sign in</h6>
-                <a>I don’t have an account</a>
+
             </div>
             <label for="username">Username</label>
             <input id="username" placeholder="Email address or username">
             <label for="password">Password</label>
             <input id="password" type="password" placeholder="Password">
+            <div class="form-section">
+                <div class="form-check">
+                    <input type="checkbox" name="keep-login" id="keep-login">
+                    <label for="keep-login">Keep me signed in</label>
+                </div>
+                <a class="forgot-password" href="#">Forgot password?</a>
+
+            </div>
             <button>Sign in</button>
-            <a class="forgot-password" href="#">Forgot password?</a>
+            <div class="create-account">
+                <p>Don’t have an account?</p>
+                <button>Create Account</button>
+            </div>
         </form>
     </div>
 </div>
