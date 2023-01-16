@@ -57,6 +57,7 @@ a {
   cursor: pointer;
 }
 
+/* ------------Buttons ------------*/
 button {
   height: 40px;
   padding: 8px 16px;
@@ -88,6 +89,22 @@ button:active {
 }
 .secondary-btn:active {
   background-color: #D5E8BD;
+}
+
+.tertiary-btn {
+  background-color: white;
+  color: #78B42B;
+  border: 2px solid #78B42B;
+}
+.tertiary-btn:hover {
+  background-color: white;
+  border-color: #70AA27;
+  color: #70AA27;
+}
+.tertiary-btn:active {
+  background-color: #EBF4DF;
+  border-color: #609022;
+  color: #609022;
 }
 
 .hide {
@@ -398,21 +415,18 @@ label {
 }
 .form-page-container .form-container .create-account {
   width: 100%;
-  height: 104px;
+  margin-top: 32px;
+  border-top: 2px dashed rgba(72, 73, 74, 0.1294117647);
+  padding: 16px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  gap: 16px;
 }
 .form-page-container .form-container .create-account p {
   width: 189px;
   height: 16px;
-}
-.form-page-container .form-container .create-account button {
-  background-color: white;
-  color: #78B42B;
-  border: 2px solid #78B42B;
+  margin-bottom: 24px;
 }
 
 .events-page-container {
