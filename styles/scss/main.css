@@ -520,6 +520,37 @@ label {
   transform: scale(0.99);
 }
 
+/*------------------EVENT PAGE------------------*/
+.event-header {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.event-header .event-category {
+  color: #151617;
+}
+.event-header h4 {
+  width: 820px;
+  height: 96px;
+  line-height: 48px;
+  color: #151617;
+  text-align: center;
+}
+.event-header .event-author-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.event-header .event-author-details .post-date {
+  color: #737374;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
 @media screen and (max-width: 1024px) {
   h4 {
     font-size: 24px;
