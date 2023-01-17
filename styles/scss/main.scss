@@ -282,7 +282,11 @@ main {
     justify-content: space-between;
 
     img {
-      width: 100%;
+      width: 640px;
+    }
+
+    .event-keywords {
+      width: 640px;
     }
 
     .article-body {
@@ -294,14 +298,13 @@ main {
       }
 
       p {
-        max-width: 733px;
+        max-width: 640px;
         font-size: 16px;
         line-height: 21px;
       }
     }
 
     .events-menu {
-      margin-left: 24px;
 
       h4 {
         margin-bottom: 24px;
@@ -702,6 +705,9 @@ label {
 }
 
 .event-keywords {
+  margin-top: 8px;
+  max-width: 100%;
+
   a {
     font-size: 14px;
     font-weight: 500;
@@ -1040,4 +1046,10 @@ footer {
     }
   }
 
+}
+
+::placeholder {
+  color: #ADADAD;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }

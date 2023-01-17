@@ -226,7 +226,10 @@ main .events-container {
   justify-content: space-between;
 }
 main .events-container img {
-  width: 100%;
+  width: 640px;
+}
+main .events-container .event-keywords {
+  width: 640px;
 }
 main .events-container .article-body {
   margin-top: 32px;
@@ -236,12 +239,9 @@ main .events-container .article-body h6 {
   margin-bottom: 16px;
 }
 main .events-container .article-body p {
-  max-width: 733px;
+  max-width: 640px;
   font-size: 16px;
   line-height: 21px;
-}
-main .events-container .events-menu {
-  margin-left: 24px;
 }
 main .events-container .events-menu h4 {
   margin-bottom: 24px;
@@ -559,6 +559,10 @@ label {
   line-height: 14px;
 }
 
+.event-keywords {
+  margin-top: 8px;
+  max-width: 100%;
+}
 .event-keywords a {
   font-size: 14px;
   font-weight: 500;
@@ -803,6 +807,11 @@ footer .footer-nav-container .footer-nav .links a:not(:last-child) {
   main .events-container .events-menu .upcoming-events {
     margin-bottom: 24px;
   }
+}
+::placeholder {
+  color: #ADADAD;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=main.css.map */
