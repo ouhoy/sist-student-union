@@ -294,6 +294,7 @@ main .events-container .events-menu button {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  border-radius: 32px;
 }
 main .events-container .events-menu button img {
   width: 24px;
@@ -532,6 +533,9 @@ label {
 .event-header .event-category {
   color: #151617;
 }
+.event-header .event-category span {
+  color: #295BA7;
+}
 .event-header h4 {
   width: 820px;
   height: 96px;
@@ -545,10 +549,21 @@ label {
   justify-content: center;
   gap: 16px;
 }
+.event-header .event-author-details .event-author-name {
+  line-height: 16px;
+}
 .event-header .event-author-details .post-date {
   color: #737374;
   font-weight: 400;
   margin-top: 8px;
+  line-height: 14px;
+}
+
+.event-body {
+  margin-top: 64px;
+}
+.event-body div img {
+  width: 940px;
 }
 
 @media screen and (max-width: 1024px) {

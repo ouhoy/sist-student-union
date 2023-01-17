@@ -366,6 +366,7 @@ main {
         align-items: center;
         justify-content: center;
         gap: 8px;
+        border-radius: 32px;
 
         img {
           width: 24px;
@@ -660,6 +661,11 @@ label {
 
   .event-category {
     color: #151617;
+
+    span {
+      color: $secondary;
+    }
+
     //padding: 16px 32px;
   }
 
@@ -677,13 +683,30 @@ label {
     justify-content: center;
     gap: 16px;
 
+    .event-author-name {
+      line-height: 16px;
+
+    }
+
     .post-date {
       color: #737374;
       font-weight: 400;
       margin-top: 8px;
+      line-height: 14px;
+
 
     }
 
+  }
+}
+
+.event-body {
+  margin-top: 64px;
+
+  div {
+    img {
+      width: 940px;
+    }
   }
 }
 
