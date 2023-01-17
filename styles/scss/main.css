@@ -531,6 +531,7 @@ label {
 }
 .event-header .event-category {
   color: #151617;
+  font-weight: 500;
 }
 .event-header .event-category span {
   color: #295BA7;
@@ -573,6 +574,42 @@ label {
 }
 .event-body div img {
   width: 940px;
+}
+.event-body .event-description {
+  margin-top: 32px;
+}
+.event-body .event-description p {
+  width: 640px;
+  line-height: 24px;
+}
+
+footer {
+  max-width: 940px;
+  margin: 64px auto 0;
+}
+footer .footer-details {
+  width: 100%;
+  height: 255px;
+  background-color: #222020;
+}
+footer .footer-nav {
+  width: 100%;
+  height: 88px;
+  background-color: #1E1B1B;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+footer .footer-nav p {
+  color: #939191;
+  line-height: 16px;
+}
+footer .footer-nav .links a {
+  color: white;
+}
+footer .footer-nav .links a:not(:last-child) {
+  margin-right: 32px;
 }
 
 @media screen and (max-width: 1024px) {

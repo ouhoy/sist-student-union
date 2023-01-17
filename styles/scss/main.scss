@@ -661,6 +661,7 @@ label {
 
   .event-category {
     color: #151617;
+    font-weight: 500;
 
     span {
       color: $secondary;
@@ -725,6 +726,54 @@ label {
   div {
     img {
       width: 940px;
+    }
+  }
+
+  .event-description {
+    margin-top: 32px;
+
+    p {
+      width: 640px;
+      line-height: 24px;
+
+    }
+  }
+}
+
+footer {
+  max-width: $max-width;
+  margin: 64px auto 0;
+
+  .footer-details {
+    width: 100%;
+    height: 255px;
+    background-color: #222020;
+  }
+
+  .footer-nav {
+    width: 100%;
+    height: 88px;
+    background-color: #1E1B1B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    p {
+      color: #939191;
+      line-height: 16px;
+    }
+
+    .links {
+      a {
+        color: white;
+
+        &:not(:last-child) {
+          margin-right: 32px;
+        }
+      }
+
+
     }
   }
 }
