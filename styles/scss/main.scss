@@ -962,6 +962,64 @@ footer {
 /*------------------DASHBOARD PAGE------------------*/
 .border-dashboard {
   background-color: #F3F4F6;
+
+  .nav-container {
+    .user {
+      width: 40px;
+      height: 40px;
+      border-radius: 32px;
+      background-color: $secondary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+
+      &:active, &:focus {
+        transform: scale(0.95);
+        background-color: $secondary-active;
+      }
+
+      p {
+        color: $secondary-light;
+
+        margin: 0 auto;
+      }
+    }
+
+    .avatar-menu {
+
+      position: absolute;
+      top: 48px;
+      background-color: white;
+      padding: 16px 32px;
+      border-radius: $radius;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.14);
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+    }
+  }
+
+
+}
+
+.page-form-title {
+  width: 400px;
+  margin: 64px auto;
+
+  h4, p {
+    text-align: center;
+  }
+}
+
+form {
+  margin-bottom: 64px;
 }
 
 .dashboard-container {
@@ -978,6 +1036,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: $max-width;
+
+
   }
 
   table {
@@ -987,6 +1047,24 @@ footer {
     font-weight: 500;
     background-color: white;
     margin: 32px auto;
+
+    td {
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $secondary-darker;
+        background-color: $secondary-light-hover;
+        padding: 4px 16px;
+        margin: 9px 0px;
+        border-radius: 32px;
+        font-size: 14px;
+      }
+      p[is-pending] {
+        color: $primary-darker;
+        background-color: $primary-light-hover;
+      }
+    }
 
     th {
       padding: 16px;
@@ -998,6 +1076,7 @@ footer {
       color: $primary;
     }
   }
+
 }
 
 @media screen and (max-width: 1024px) {

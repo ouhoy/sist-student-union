@@ -744,6 +744,52 @@ footer .footer-nav-container .footer-nav .links a:not(:last-child) {
 .border-dashboard {
   background-color: #F3F4F6;
 }
+.border-dashboard .nav-container .user {
+  width: 40px;
+  height: 40px;
+  border-radius: 32px;
+  background-color: #295BA7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+.border-dashboard .nav-container .user:active, .border-dashboard .nav-container .user:focus {
+  transform: scale(0.95);
+  background-color: #214986;
+}
+.border-dashboard .nav-container .user p {
+  color: #EAEFF6;
+  margin: 0 auto;
+}
+.border-dashboard .nav-container .avatar-menu {
+  position: absolute;
+  top: 48px;
+  background-color: white;
+  padding: 16px 32px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14);
+}
+.border-dashboard .nav-container .avatar-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.page-form-title {
+  width: 400px;
+  margin: 64px auto;
+}
+.page-form-title h4, .page-form-title p {
+  text-align: center;
+}
+
+form {
+  margin-bottom: 64px;
+}
 
 .dashboard-container {
   display: flex;
@@ -765,6 +811,21 @@ footer .footer-nav-container .footer-nav .links a:not(:last-child) {
   font-weight: 500;
   background-color: white;
   margin: 32px auto;
+}
+.dashboard-container table td p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0E203A;
+  background-color: #DFE6F2;
+  padding: 4px 16px;
+  margin: 9px 0px;
+  border-radius: 32px;
+  font-size: 14px;
+}
+.dashboard-container table td p[is-pending] {
+  color: #2A3F0F;
+  background-color: #EBF4DF;
 }
 .dashboard-container table th {
   padding: 16px;

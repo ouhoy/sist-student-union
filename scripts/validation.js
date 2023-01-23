@@ -5,19 +5,22 @@ const tester = /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|
 
 // To validate email addresses
 export function emailValidation(email) {
-    if (!email) return false;
+    if (!email) {
+        alert("Please enter a valid email")
+        return false
+    }
 
     const emailParts = email.split('@');
 
     if (emailParts.length !== 2) {
-        console.log("Please enter a valid email")
+        alert("Please enter a valid email")
         return false
     }
 
     const address = emailParts[1];
 
     if (emailParts.length > 100) {
-        console.log("The entered email is too long")
+        alert("The entered email is too long")
         return false
     }
 
@@ -26,13 +29,13 @@ export function emailValidation(email) {
     if (domainParts.some(function (part) {
         return part.length > 63;
     })) {
-        console.log("Please enter a valid email")
+        alert("Please enter a valid email")
         return false
     }
 
 
     if (!tester.test(email)) {
-        console.log("Please enter a valid email")
+        alert("Please enter a valid email")
         return false
     }
 
@@ -45,16 +48,16 @@ export function nameValidation(name, nameType) {
 
     // Check if name contains only alphabetic characters
     if (/[^a-zA-Z]/.test(name.replaceAll(" ", ""))) {
-        console.log("Please enter a valid name.")
+        alert("Please enter a valid name.")
         return false
     }
 
     if (name.replaceAll(" ", "") < 1) {
-        console.log(`Please enter your ${nameType}`)
+        alert(`Please enter your ${nameType}`)
         return false
     }
     if (name.length > 50) {
-        console.log(`Your ${nameType} exceeds the character limit which is 50.`)
+        alert(`Your ${nameType} exceeds the character limit which is 50.`)
         return false
     }
 
@@ -64,16 +67,20 @@ export function nameValidation(name, nameType) {
 export function userNameValidation(username) {
 
     if (username.includes(" ")) {
-        console.log("Please make sure that your username does not contain any whitespaces.")
+        alert("Please make sure that your username does not contain any whitespaces.")
         return false
     }
     if (/[^a-zA-Z]/.test(name.replaceAll(" ", ""))) {
-        console.log("Make sure your username does not contain any special characters or numbers.")
+        alert("Make sure your username does not contain any special characters or numbers.")
         return false
     }
 
     if (!username.replaceAll(" ", "")) {
-        console.log("This input is required")
+        alert("This input is required")
+        return false
+    }
+    if (username.length > 20) {
+        alert("Username is too long.")
         return false
     }
     return true
@@ -81,15 +88,15 @@ export function userNameValidation(username) {
 
 export function passwordValidation(password) {
     if (!password) {
-        console.log("Please enter a valid password.")
+        alert("Please enter a valid password.")
         return false
     }
     if (password.length > 10) {
-        console.log("Please make sure that your password does not exceed 10 characters.")
+        alert("Please make sure that your password does not exceed 10 characters.")
         return false
     }
     if (password.length < 6) {
-        console.log("Your password should contain at least 6 characters.")
+        alert("Your password should contain at least 6 characters.")
         return false
     }
     return true

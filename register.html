@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="./styles/scss/main.css"/>
     <script src="./scripts/register-validation.js" type="module" defer></script>
-    <title>Login</title>
+    <title>Get Started</title>
 </head>
 <body>
 <div class="nav-container">
@@ -112,9 +112,10 @@
                 <input id="email" type="email" aria-autocomplete="none" autocomplete="off"
                        placeholder="example@email.com">
                 <label for="username">Username</label>
-                <input id="username" type="text" aria-autocomplete="none" autocomplete="off" placeholder="username">
+                <input id="username" aria-autocomplete="none" type="text" aria-autocomplete="none" autocomplete="off"
+                       placeholder="username">
                 <label for="password">Password</label>
-                <input id="password" type="password" autocomplete="off" placeholder="password">
+                <input aria-autocomplete="none" id="password" type="password" autocomplete="off" placeholder="password">
                 <button class="step-one" type="submit">Continue</button>
 
             </div>
@@ -126,13 +127,14 @@
                 <div class="radio-buttons">
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" checked name="gender" value="female"
+                               id="flexRadioDefault1">
                         <label class="form-check-label" for="flexRadioDefault1">
                             Female
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <input class="form-check-input" type="radio" name="gender" value="male" id="flexRadioDefault2">
                         <label class="form-check-label" for="flexRadioDefault2">
                             Male
                         </label>
@@ -182,9 +184,12 @@
 
             <!-- DONE -->
             <div class="done hide">
-                <h4>See yaa</h4>
+                <p style="text-align: center">You have created an account successfully.</p>
+                <p style="text-align: center">Click on this button to log in</p>
+                <button class="done-btn" onclick="window.location.href = './login-page.html'">Login</button>
             </div>
         </form>
+
     </div>
 </div>
 </body>

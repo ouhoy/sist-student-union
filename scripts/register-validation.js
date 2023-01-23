@@ -20,6 +20,18 @@ const email = $("#email")
 const userName = $("#username")
 const password = $("#password")
 
+const gender = document.querySelector('input[name="gender"]:checked').value;
+const title = $("#user-title")
+const description = $("#description")
+const profileUrl = $("#profile-url")
+
+const phoneNumber = $("#phone-number")
+const addressOne = $("#address-1")
+const addressTwo = $("#address-2")
+const city = $("#city")
+const postcode = $("#post-code")
+
+
 const stepOneBtn = $(".step-one")
 const stepTwoBtn = $(".step-two")
 const stepThreeBtn = $(".step-three")
@@ -27,8 +39,10 @@ const stepThreeBtn = $(".step-three")
 const backToStepOne = $(".back-to-step-1")
 const backToStepTwo = $(".back-to-step-2")
 
+const doneBtn = $(".done-btn");
 
 stepOneBtn.addEventListener("click", function (e) {
+
     e.preventDefault()
 
     if (!nameValidation(firstName.value, "first name")) return;
@@ -37,13 +51,6 @@ stepOneBtn.addEventListener("click", function (e) {
     if (!userNameValidation(userName.value)) return;
     if (!passwordValidation(password.value)) return;
 
-    console.table({
-        firstName: firstName.value.toLowerCase(),
-        lastName: lastName.value.toLowerCase(),
-        email: email.value.toLowerCase(),
-        username: userName.value.toLowerCase(),
-        password: password.value.toLowerCase()
-    })
 
     steps[0].removeAttribute("is-active")
     steps[0].querySelector(".step-number").innerHTML = checkIcon;
@@ -62,6 +69,29 @@ stepOneBtn.addEventListener("click", function (e) {
 stepTwoBtn.addEventListener("click", function (e) {
     e.preventDefault()
 
+    if (gender !== "male" && gender !== "female") {
+        console.log(gender)
+        return alert("Please enter your gender")
+    }
+
+    if (!title.value) {
+        return alert("Please enter a title")
+    }
+
+    if (title.value.length > 10) {
+        return alert("Title too long")
+    }
+
+    if (description.value.length > 200) {
+        return alert("Description too long")
+
+    }
+    if (profileUrl.value.length > 100) {
+        profileUrl.value = ""
+        return alert("Link too long")
+
+    }
+
     steps[1].removeAttribute("is-active")
     steps[1].querySelector(".step-number").innerHTML = checkIcon;
     steps[1].setAttribute("is-done", "")
@@ -69,6 +99,8 @@ stepTwoBtn.addEventListener("click", function (e) {
 
     steps[2].setAttribute("is-active", "")
     homeAddress.classList.remove("hide")
+
+
 })
 
 backToStepOne.addEventListener("click", function (e) {
@@ -86,6 +118,25 @@ backToStepOne.addEventListener("click", function (e) {
 stepThreeBtn.addEventListener("click", function (e) {
     e.preventDefault()
 
+    if (phoneNumber.value.length > 15) {
+        return alert("The phone is too loong! Should not exceed 15 integers.")
+    }
+
+    if (addressOne.value.length > 50) {
+        return alert("The address is too long! Should not exceed 50 characters")
+    }
+    if (addressTwo.value.length > 50) {
+        return alert("The address is too long! Should not exceed 50 characters")
+    }
+    if (city.value.length > 50) {
+        return alert("The city name is too long! Should not exceed 50 characters")
+    }
+
+    if (postcode.value.length > 10) {
+        return alert("The postcode is too long! Should not exceed 10 characters")
+    }
+
+
     steps[2].removeAttribute("is-active")
     steps[2].querySelector(".step-number").innerHTML = checkIcon;
     steps[2].setAttribute("is-done", "")
@@ -95,3 +146,6 @@ stepThreeBtn.addEventListener("click", function (e) {
     doneRegistering.classList.remove("hide")
 })
 
+doneBtn.addEventListener("click", function (e) {
+    e.preventDefault()
+})

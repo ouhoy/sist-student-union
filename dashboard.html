@@ -15,12 +15,17 @@
     />
 
     <link rel="stylesheet" href="./styles/scss/main.css"/>
+    <script src="./scripts/dashboard.js" type="module" defer></script>
     <title>Dashboard</title>
 </head>
+
+<body class="border-dashboard">
+
+
 <div class="nav-container">
     <nav>
         <div class="logo">
-            <a href="./index.html">
+            <a href="#">
                 <img
                         src="./assets/icons/SIST Events Logo.svg"
                         alt="SIST Events Logo"
@@ -28,33 +33,32 @@
                 <h6 class="logo-title">SIST events</h6>
             </a>
         </div>
-        <div class="links-holder">
-            <div class="links hide-for-tablet">
-                <a href="./index.html">Home</a>
-                <a href="#">About</a>
-                <a href="./events.html">Events</a>
-            </div>
-            <div class="nav-cta">
-                <a href="./login-page.html">Login</a>
-                <button onclick="window.location.href = './register.html'">Get Started</button>
-            </div>
-            <div class="ham-menu show-for-tablet">
-                <img src="assets/icons/ham-menu.svg" alt="menu icon">
+        <div class="user">
+            <p>AD</p>
+            <div class="avatar-menu hide">
+
+                <a href="./login-page.html"> <img src="./assets/icons/arrow-right-from-arc.svg" alt="logout icon">
+                    Logout</a>
+
             </div>
         </div>
+
+
     </nav>
 </div>
-<body class="border-dashboard">
+
 
 <div class="dashboard-container">
 
     <div class="dashboard-header">
+
         <div>
             <h4>Events</h4>
             <p>A list of all events</p>
         </div>
-        <button>Add Event</button>
+        <button onclick="window.location.href = './add-event.html'">Add Event</button>
     </div>
+
     <div class="table">
         <table class="table">
             <thead class="table-light">
@@ -71,7 +75,7 @@
             <tr>
                 <th scope="row">1</th>
                 <td>Unleash Your Inner Explorer: Join Our Annual School Outdoor Adventure and Camping Trip</td>
-                <td>pending</td>
+                <td><p is-pending>pending</p></td>
                 <td></td>
                 <td class="edit-event">Edit</td>
                 <td></td>
@@ -79,7 +83,7 @@
             <tr>
                 <th scope="row">2</th>
                 <td>Unleash Your Inner Explorer: Join Our Annual School Outdoor Adventure and Camping Trip</td>
-                <td>pending</td>
+                <td><p is-pending>pending</p></td>
                 <td></td>
                 <td class="edit-event">Edit</td>
                 <td></td>
@@ -87,7 +91,7 @@
             <tr>
                 <th scope="row">3</th>
                 <td>Unleash Your Inner Explorer: Join Our Annual School Outdoor Adventure and Camping Trip</td>
-                <td>pending</td>
+                <td><p>done</p></td>
                 <td></td>
                 <td class="edit-event">Edit</td>
                 <td></td>

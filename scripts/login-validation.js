@@ -13,7 +13,7 @@ submitBtn.addEventListener("click", function (e) {
     e.preventDefault()
     if (!emailValidation(email.value)) return;
     if (!password.value) {
-        console.log("Please enter a password!")
+        alert("Please enter a password!")
         password.value = ""
         return
     }
