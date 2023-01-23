@@ -10,9 +10,11 @@ function $(id, selectAll = false) {
 }
 
 const steps = $(".step", true)
+
 const userDetails = $(".user-details")
 const extraInformation = $(".extra-information")
 const homeAddress = $(".home-address")
+
 const doneRegistering = $(".done")
 const firstName = $("#firstName")
 const lastName = $("#lastName")
@@ -143,9 +145,23 @@ stepThreeBtn.addEventListener("click", function (e) {
     homeAddress.classList.add("hide")
 
     steps[3].setAttribute("is-active", "")
+    steps[3].querySelector(".step-number").innerHTML = checkIcon;
+    steps[3].setAttribute("is-done", "")
+
     doneRegistering.classList.remove("hide")
 })
 
+backToStepTwo.addEventListener("click", function (e) {
+    e.preventDefault()
+
+    steps[2].removeAttribute("is-active")
+    steps[1].removeAttribute("is-done", "")
+    steps[1].setAttribute("is-active", "")
+    steps[1].querySelector(".step-number").innerHTML = `<p>2</p>`;
+
+    extraInformation.classList.remove("hide")
+    homeAddress.classList.add("hide")
+})
 doneBtn.addEventListener("click", function (e) {
     e.preventDefault()
 })
