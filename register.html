@@ -47,9 +47,11 @@
     </nav>
 </div>
 
-<div class="form-page-container">
+<div class="form-page-container register-page">
 
     <div class="form-container">
+
+        <!-- REGISTER STEPS -->
         <div class="register-steps">
             <div is-active class="step">
                 <div class="step-number">
@@ -74,11 +76,24 @@
                     <p>3</p>
                 </div>
                 <p>
-                    Welcome on board!
+                    Address
+                </p>
+            </div>
+            <hr>
+
+            <div class="step">
+                <div class="step-number">
+                    <p>4</p>
+                </div>
+                <p>
+                    Done!
                 </p>
             </div>
         </div>
+
         <form>
+
+            <!-- USER DETAILS -->
             <div class="user-details">
 
 
@@ -93,14 +108,81 @@
                         <input id="lastName" type="text" aria-autocomplete="none" autocomplete="off" placeholder="doe">
                     </div>
                 </div>
+
                 <label for="email">Email</label>
                 <input id="email" type="email" aria-autocomplete="none" autocomplete="off"
                        placeholder="example@email.com">
                 <label for="username">Username</label>
-                <input id="username" type="email" aria-autocomplete="none" autocomplete="off" placeholder="username">
+                <input id="username" type="text" aria-autocomplete="none" autocomplete="off" placeholder="username">
                 <label for="password">Password</label>
                 <input id="password" type="password" autocomplete="off" placeholder="password">
                 <button class="step-one" type="submit">Continue</button>
+
+            </div>
+
+            <!-- EXTRA INFORMATION -->
+            <div class="extra-information hide">
+
+                <label>Gender </label>
+                <div class="radio-buttons">
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Female
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Male
+                        </label>
+                    </div>
+                </div>
+
+                <label for="phone-number">Telephone</label>
+                <input id="phone-number" type="number" aria-autocomplete="none" autocomplete="off"
+                       placeholder="telephone">
+
+                <label for="user-title">Title</label>
+                <input id="user-title" type="text" aria-autocomplete="none" autocomplete="off"
+                       placeholder="example web developer">
+
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="description"></textarea>
+
+                <label for="profile-url">Profile link</label>
+                <input id="profile-url" type="text" aria-autocomplete="none" autocomplete="off"
+                       placeholder="profile url">
+
+                <button class="step-two" type="submit">Continue</button>
+                <button style="margin-top: 8px" class="tertiary-btn back-to-step-1">Go back</button>
+
+            </div>
+
+            <!-- USER ADDRESS -->
+            <div class="home-address hide">
+
+                <label for="address-1">Address 1</label>
+                <input id="address-1" type="text" aria-autocomplete="none" autocomplete="off"
+                       placeholder="street address">
+                <label for="address-2">Address 2</label>
+                <input id="address-2" type="text" aria-autocomplete="none" autocomplete="off"
+                       placeholder="apartment, suite, etc">
+                <label for="city">City</label>
+                <input id="city" type="text" aria-autocomplete="none" autocomplete="off" placeholder="city">
+                <label for="post-code">Postcode</label>
+                <br>
+                <input style="width: 190px" id="post-code" type="text" aria-autocomplete="none" autocomplete="off"
+                       placeholder="postcode">
+
+                <button class="step-three" type="submit">Continue</button>
+                <button style="margin-top: 8px" class="tertiary-btn back-to-step-2">Go back</button>
+            </div>
+
+            <!-- DONE -->
+            <div class="done hide">
+                <h4>See yaa</h4>
             </div>
         </form>
     </div>

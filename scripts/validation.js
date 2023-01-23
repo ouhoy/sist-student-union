@@ -76,15 +76,20 @@ export function userNameValidation(username) {
         console.log("This input is required")
         return false
     }
+    return true
 }
 
 export function passwordValidation(password) {
-    if (!password.value) {
+    if (!password) {
         console.log("Please enter a valid password.")
         return false
     }
     if (password.length > 10) {
         console.log("Please make sure that your password does not exceed 10 characters.")
+        return false
+    }
+    if (password.length < 6) {
+        console.log("Your password should contain at least 6 characters.")
         return false
     }
     return true

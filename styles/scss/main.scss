@@ -423,6 +423,25 @@ input {
 
 }
 
+textarea {
+  color: $body-color;
+  outline: none;
+  border: 1px solid #DBDBDB;
+  margin-bottom: 16px;
+  padding: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  border-radius: $radius;
+  width: 100%;
+  height: 136px;
+
+  &:active, &:focus {
+    border: 2px solid $primary;
+    outline: 4px solid $primary-light-hover;
+  }
+}
+
 input[type="checkbox"] {
   width: 16px;
   height: 16px;
@@ -433,6 +452,13 @@ input[type="password"]:focus {
   outline: 4px solid $primary-light-hover;
   border: 2px solid $primary;
 }
+
+input[type="number"]:active,
+input[type="number"]:focus {
+  outline: 4px solid $primary-light-hover;
+  border: 2px solid $primary;
+}
+
 
 input[type="email"]:active,
 input[type="email"]:focus {
@@ -457,8 +483,20 @@ label {
   color: #46474b;
 }
 
-.form-page-container {
+.login-page {
   height: 100dvh;
+
+  form-container {
+    height: 100dvh;
+  }
+}
+
+.register-page {
+  margin: 32px auto;
+}
+
+.form-page-container {
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -467,7 +505,7 @@ label {
 
   .form-container {
     min-width: 470px;
-    height: 100dvh;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -547,6 +585,18 @@ label {
 
       input[type="text"] {
         width: 190px;
+      }
+    }
+
+    .radio-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 16px;
+
+      input[type="radio"] {
+        width: 16px;
+        height: 17px;
       }
     }
 
