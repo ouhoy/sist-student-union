@@ -426,9 +426,10 @@ input[type="checkbox"] {
 
 input[type="password"]:active,
 input[type="password"]:focus {
-  border: 2px solid $primary;
   outline: 4px solid $primary-light-hover;
+  border: 2px solid $primary;
 }
+
 input[type="email"]:active,
 input[type="email"]:focus {
   border: 2px solid $primary;
@@ -476,7 +477,7 @@ label {
       margin-bottom: 24px;
 
       h6 {
-        width: 82px;
+
         font-weight: 600;
         color: #212121;
       }

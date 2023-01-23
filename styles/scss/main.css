@@ -340,8 +340,8 @@ input[type=checkbox] {
 
 input[type=password]:active,
 input[type=password]:focus {
-  border: 2px solid #78B42B;
   outline: 4px solid #EBF4DF;
+  border: 2px solid #78B42B;
 }
 
 input[type=email]:active,
@@ -390,7 +390,6 @@ label {
   margin-bottom: 24px;
 }
 .form-page-container .form-container .form-title h6 {
-  width: 82px;
   font-weight: 600;
   color: #212121;
 }
