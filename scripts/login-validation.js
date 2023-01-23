@@ -14,7 +14,6 @@ submitBtn.addEventListener("click", function (e) {
     }
     if (!password.value) {
         console.log("Please enter a Password!")
-        return
     }
 
     console.table({password: password.value, username: userName.value})

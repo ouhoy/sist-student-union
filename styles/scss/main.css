@@ -316,7 +316,7 @@ form {
 form button {
   width: 100%;
   height: 48px;
-  border-radius: 32px;
+  border-radius: 8px;
 }
 
 input {
@@ -324,7 +324,7 @@ input {
   height: 48px;
   color: #151617;
   outline: none;
-  border: 2px solid #DBDBDB;
+  border: 1px solid #DBDBDB;
   padding-left: 16px;
   font-weight: 500;
   font-size: 14px;
@@ -338,8 +338,20 @@ input[type=checkbox] {
   height: 16px;
 }
 
-input:active,
-input:focus {
+input[type=password]:active,
+input[type=password]:focus {
+  border: 2px solid #78B42B;
+  outline: 4px solid #EBF4DF;
+}
+
+input[type=email]:active,
+input[type=email]:focus {
+  border: 2px solid #78B42B;
+  outline: 4px solid #EBF4DF;
+}
+
+input[type=text]:active,
+input[type=text]:focus {
   border: 2px solid #78B42B;
   outline: 4px solid #EBF4DF;
 }
@@ -352,7 +364,7 @@ label {
   font-weight: 500;
   font-size: 13.33px;
   margin-bottom: 8px;
-  color: #313234;
+  color: #46474b;
 }
 
 .form-page-container {
@@ -398,15 +410,14 @@ label {
 .form-page-container .form-container .form-section input[type=checkbox] {
   margin: 0;
 }
-.form-page-container .form-container .form-section .form-check {
+.form-page-container .form-container .form-section .form-check-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 }
-.form-page-container .form-container .form-section .form-check label {
+.form-page-container .form-container .form-section .form-check-container label {
   margin: 0;
-  color: #313234;
 }
 .form-page-container .form-container .form-section .forgot-password {
   font-size: 14px;
@@ -427,6 +438,7 @@ label {
   width: 189px;
   height: 16px;
   margin-bottom: 24px;
+  color: #46474b;
 }
 
 .events-page-container {

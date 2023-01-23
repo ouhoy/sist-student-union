@@ -399,7 +399,7 @@ form {
   button {
     width: 100%;
     height: 48px;
-    border-radius: 32px;
+    border-radius: 8px;
 
   }
 }
@@ -409,7 +409,7 @@ input {
   height: $input_height;
   color: $body-color;
   outline: none;
-  border: 2px solid #DBDBDB;
+  border: 1px solid #DBDBDB;
   padding-left: 16px;
   font-weight: 500;
   font-size: 14px;
@@ -424,8 +424,19 @@ input[type="checkbox"] {
   height: 16px;
 }
 
-input:active,
-input:focus {
+input[type="password"]:active,
+input[type="password"]:focus {
+  border: 2px solid $primary;
+  outline: 4px solid $primary-light-hover;
+}
+input[type="email"]:active,
+input[type="email"]:focus {
+  border: 2px solid $primary;
+  outline: 4px solid $primary-light-hover;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus {
   border: 2px solid $primary;
   outline: 4px solid $primary-light-hover;
 }
@@ -438,7 +449,7 @@ label {
   font-weight: 500;
   font-size: 13.33px;
   margin-bottom: 8px;
-  color: #313234;
+  color: #46474b;
 }
 
 .form-page-container {
@@ -490,16 +501,14 @@ label {
         margin: 0;
       }
 
-      .form-check {
+      .form-check-container {
         display: flex;
         align-items: center;
         justify-content: center;
-
         gap: 8px;
 
         label {
           margin: 0;
-          color: #313234;
         }
       }
 
@@ -527,6 +536,7 @@ label {
         width: 189px;
         height: 16px;
         margin-bottom: 24px;
+        color: #46474b;
       }
 
 
@@ -545,8 +555,6 @@ label {
 
   .events-controller {
     width: 100%;
-    //padding-bottom: 24px;
-    //border-bottom: 1px solid #F3F3F3;
     display: flex;
     align-items: center;
     justify-content: flex-start;
