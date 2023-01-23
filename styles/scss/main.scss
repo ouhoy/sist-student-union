@@ -12,6 +12,10 @@ $secondary: #295BA7;
 $secondary-hover: #255296;
 $secondary-active: #214986;
 
+//Gray
+$gray-light: #F6F7F8;
+$gray-darker: #444649;
+
 //Body
 $body-color: #151617;
 $body-color-secondary: #2d3445;
@@ -456,6 +460,7 @@ label {
 .form-page-container {
   height: 100dvh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -468,6 +473,82 @@ label {
     justify-content: center;
     flex-direction: column;
     gap: 48px;
+
+
+    .register-steps {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+
+      hr {
+        width: 64px;
+        border-top: 1px dashed;
+
+      }
+
+      .step {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        p {
+          color: $gray-darker;
+          font-size: 14px;
+          line-height: 14px;
+          margin-bottom: 0;
+        }
+
+        .step-number {
+          width: 40px;
+          height: 40px;
+          border-radius: 64px;
+          background-color: $gray-light;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .step[is-active] {
+        p {
+          color: $primary-darker;
+        }
+
+        .step-number {
+          background-color: $primary-light;
+
+        }
+      }
+
+      .step[is-done] {
+        p {
+          color: $primary;
+        }
+
+        .step-number {
+          p {
+            color: white;
+          }
+
+          background-color: $primary;
+
+        }
+      }
+    }
+
+    .first-last-name {
+      width: 100%;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input[type="text"] {
+        width: 190px;
+      }
+    }
 
     .form-title {
       width: 100%;

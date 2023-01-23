@@ -14,7 +14,7 @@
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./styles/scss/main.css"/>
-    <script src="./scripts/login-validation.js" type="module" defer></script>
+    <script src="./scripts/register-validation.js" type="module" defer></script>
     <title>Login</title>
 </head>
 <body>
@@ -50,28 +50,57 @@
 <div class="form-page-container">
 
     <div class="form-container">
-        <a href="./index.html" title="Navigate to the home page."><img src="./assets/icons/SIST%20logo.svg" alt=""></a>
-        <form>
-            <div class="form-title">
-                <h4>Sign in</h4>
-
-            </div>
-            <label for="email">Email</label>
-            <input id="email" type="email" aria-autocomplete="none" autocomplete="off" placeholder="example@email.com">
-            <label for="password">Password</label>
-            <input id="password" type="password" autocomplete="off" placeholder="password">
-            <div class="form-section">
-                <div class="form-check-container">
-                    <input class="form-check-input" type="checkbox" name="keep-login" id="keep-login">
-                    <label for="keep-login">Keep me signed in</label>
+        <div class="register-steps">
+            <div is-active class="step">
+                <div class="step-number">
+                    <p>1</p>
                 </div>
-                <a class="forgot-password" href="#">Forgot password?</a>
-
+                <p>
+                    User details
+                </p>
             </div>
-            <button class="submit" type="submit">Sign in</button>
-            <div class="create-account">
-                <p>Don’t have an account?</p>
-                <button class="tertiary-btn">Create Account</button>
+            <hr>
+            <div class="step">
+                <div class="step-number">
+                    <p>2</p>
+                </div>
+                <p>
+                    Extra information
+                </p>
+            </div>
+            <hr>
+            <div class="step">
+                <div class="step-number">
+                    <p>3</p>
+                </div>
+                <p>
+                    Welcome on board!
+                </p>
+            </div>
+        </div>
+        <form>
+            <div class="user-details">
+
+
+                <div class="first-last-name">
+                    <div>
+                        <label for="firstName">First name</label>
+                        <input id="firstName" type="text" aria-autocomplete="none" autocomplete="off"
+                               placeholder="john">
+                    </div>
+                    <div>
+                        <label for="lastName">Last name</label>
+                        <input id="lastName" type="text" aria-autocomplete="none" autocomplete="off" placeholder="doe">
+                    </div>
+                </div>
+                <label for="email">Email</label>
+                <input id="email" type="email" aria-autocomplete="none" autocomplete="off"
+                       placeholder="example@email.com">
+                <label for="username">Username</label>
+                <input id="username" type="email" aria-autocomplete="none" autocomplete="off" placeholder="username">
+                <label for="password">Password</label>
+                <input id="password" type="password" autocomplete="off" placeholder="password">
+                <button class="step-one" type="submit">Continue</button>
             </div>
         </form>
     </div>

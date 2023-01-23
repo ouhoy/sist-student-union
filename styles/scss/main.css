@@ -370,6 +370,7 @@ label {
 .form-page-container {
   height: 100dvh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -381,6 +382,62 @@ label {
   justify-content: center;
   flex-direction: column;
   gap: 48px;
+}
+.form-page-container .form-container .register-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.form-page-container .form-container .register-steps hr {
+  width: 64px;
+  border-top: 1px dashed;
+}
+.form-page-container .form-container .register-steps .step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.form-page-container .form-container .register-steps .step p {
+  color: #444649;
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 0;
+}
+.form-page-container .form-container .register-steps .step .step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 64px;
+  background-color: #F6F7F8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-page-container .form-container .register-steps .step[is-active] p {
+  color: #2A3F0F;
+}
+.form-page-container .form-container .register-steps .step[is-active] .step-number {
+  background-color: #F2F8EA;
+}
+.form-page-container .form-container .register-steps .step[is-done] p {
+  color: #78B42B;
+}
+.form-page-container .form-container .register-steps .step[is-done] .step-number {
+  background-color: #78B42B;
+}
+.form-page-container .form-container .register-steps .step[is-done] .step-number p {
+  color: white;
+}
+.form-page-container .form-container .first-last-name {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-page-container .form-container .first-last-name input[type=text] {
+  width: 190px;
 }
 .form-page-container .form-container .form-title {
   width: 100%;
