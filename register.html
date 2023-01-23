@@ -21,7 +21,7 @@
 <div class="nav-container">
     <nav>
         <div class="logo">
-            <a href="#">
+            <a href="./index.html">
                 <img
                         src="./assets/icons/SIST Events Logo.svg"
                         alt="SIST Events Logo"
@@ -34,11 +34,10 @@
                 <a href="./index.html">Home</a>
                 <a href="#">About</a>
                 <a href="./events.html">Events</a>
-                <!--                <a href="#">Contact</a>-->
             </div>
             <div class="nav-cta">
                 <a href="./login-page.html">Login</a>
-                <button>Get Started</button>
+                <button onclick="window.location.href = './register.html'">Get Started</button>
             </div>
             <div class="ham-menu show-for-tablet">
                 <img src="assets/icons/ham-menu.svg" alt="menu icon">
@@ -140,9 +139,6 @@
                     </div>
                 </div>
 
-                <label for="phone-number">Telephone</label>
-                <input id="phone-number" type="number" aria-autocomplete="none" autocomplete="off"
-                       placeholder="telephone">
 
                 <label for="user-title">Title</label>
                 <input id="user-title" type="text" aria-autocomplete="none" autocomplete="off"
@@ -162,6 +158,10 @@
 
             <!-- USER ADDRESS -->
             <div class="home-address hide">
+
+                <label for="phone-number">Telephone</label>
+                <input id="phone-number" type="number" aria-autocomplete="none" autocomplete="off"
+                       placeholder="telephone">
 
                 <label for="address-1">Address 1</label>
                 <input id="address-1" type="text" aria-autocomplete="none" autocomplete="off"

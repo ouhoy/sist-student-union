@@ -11,9 +11,18 @@ $primary-darker: #2A3F0F;
 $secondary: #295BA7;
 $secondary-hover: #255296;
 $secondary-active: #214986;
+$secondary-light: #EAEFF6;
+$secondary-light-hover: #DFE6F2;
+$secondary-light-active: #BDCCE4;
+$secondary-darker: #0E203A;
 
 //Gray
-$gray-light: #F6F7F8;
+$gray: #C2C9D1;
+$gray-hover: #AFB5BC;
+$gray-active: #9BA1A7;
+$gray-light: #F9FAFA;
+$gray-light-hover: #F6F7F8;
+$gray-light-active: #ECEEF1;
 $gray-darker: #444649;
 
 //Body
@@ -126,19 +135,17 @@ button {
 
 .tertiary-btn {
   background-color: white;
-  color: $primary;
-  border: 2px solid $primary;
+  color: $gray-darker;
+  border: 2px solid $gray-darker;
 
   &:hover {
     background-color: white;
-    border-color: $primary-hover;
-    color: $primary-hover;
+
   }
 
   &:active {
-    background-color: $primary-light-hover;
-    border-color: $primary-active;
-    color: $primary-active;
+    background-color: $gray-light-hover;
+
   }
 }
 
@@ -492,7 +499,10 @@ label {
 }
 
 .register-page {
-  margin: 32px auto;
+  margin: 72px auto;
+  form {
+    margin-top: 32px;
+  }
 }
 
 .form-page-container {
@@ -522,6 +532,7 @@ label {
       hr {
         width: 64px;
         border-top: 1px dashed;
+        opacity: .5;
 
       }
 
@@ -530,6 +541,7 @@ label {
         align-items: center;
         justify-content: center;
         gap: 16px;
+
 
         p {
           color: $gray-darker;
@@ -546,31 +558,36 @@ label {
           display: flex;
           align-items: center;
           justify-content: center;
+          cursor: no-drop;
         }
       }
 
       .step[is-active] {
         p {
-          color: $primary-darker;
+          color: $secondary-darker;
+
         }
 
         .step-number {
-          background-color: $primary-light;
+          background-color: $secondary-light-hover;
+          cursor: default;
 
         }
       }
 
       .step[is-done] {
         p {
-          color: $primary;
+          color: $secondary;
         }
 
         .step-number {
+          cursor: default;
+
           p {
             color: white;
           }
 
-          background-color: $primary;
+          background-color: $secondary;
 
         }
       }

@@ -93,18 +93,14 @@ button:active {
 
 .tertiary-btn {
   background-color: white;
-  color: #78B42B;
-  border: 2px solid #78B42B;
+  color: #444649;
+  border: 2px solid #444649;
 }
 .tertiary-btn:hover {
   background-color: white;
-  border-color: #70AA27;
-  color: #70AA27;
 }
 .tertiary-btn:active {
-  background-color: #EBF4DF;
-  border-color: #609022;
-  color: #609022;
+  background-color: #F6F7F8;
 }
 
 .hide {
@@ -399,7 +395,10 @@ label {
 }
 
 .register-page {
-  margin: 32px auto;
+  margin: 72px auto;
+}
+.register-page form {
+  margin-top: 32px;
 }
 
 .form-page-container {
@@ -425,6 +424,7 @@ label {
 .form-page-container .form-container .register-steps hr {
   width: 64px;
   border-top: 1px dashed;
+  opacity: 0.5;
 }
 .form-page-container .form-container .register-steps .step {
   display: flex;
@@ -442,22 +442,25 @@ label {
   width: 40px;
   height: 40px;
   border-radius: 64px;
-  background-color: #F6F7F8;
+  background-color: #F9FAFA;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: no-drop;
 }
 .form-page-container .form-container .register-steps .step[is-active] p {
-  color: #2A3F0F;
+  color: #0E203A;
 }
 .form-page-container .form-container .register-steps .step[is-active] .step-number {
-  background-color: #F2F8EA;
+  background-color: #DFE6F2;
+  cursor: default;
 }
 .form-page-container .form-container .register-steps .step[is-done] p {
-  color: #78B42B;
+  color: #295BA7;
 }
 .form-page-container .form-container .register-steps .step[is-done] .step-number {
-  background-color: #78B42B;
+  cursor: default;
+  background-color: #295BA7;
 }
 .form-page-container .form-container .register-steps .step[is-done] .step-number p {
   color: white;

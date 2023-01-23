@@ -31,11 +31,11 @@ const backToStepTwo = $(".back-to-step-2")
 stepOneBtn.addEventListener("click", function (e) {
     e.preventDefault()
 
-    // if (!nameValidation(firstName.value, "first name")) return;
-    // if (!nameValidation(lastName.value, "last name")) return;
-    // if (!emailValidation(email.value)) return;
-    // if (!userNameValidation(userName.value)) return;
-    // if (!passwordValidation(password.value)) return;
+    if (!nameValidation(firstName.value, "first name")) return;
+    if (!nameValidation(lastName.value, "last name")) return;
+    if (!emailValidation(email.value)) return;
+    if (!userNameValidation(userName.value)) return;
+    if (!passwordValidation(password.value)) return;
 
     console.table({
         firstName: firstName.value.toLowerCase(),
