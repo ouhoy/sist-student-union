@@ -30,6 +30,7 @@ $body-color: #151617;
 $body-color-secondary: #2d3445;
 $radius: 8px;
 $input_height: 48px;
+
 $max-width: 940px;
 
 * {
@@ -500,6 +501,7 @@ label {
 
 .register-page {
   margin: 72px auto;
+
   form {
     margin-top: 32px;
   }
@@ -955,6 +957,47 @@ footer {
     }
   }
 
+}
+
+/*------------------DASHBOARD PAGE------------------*/
+.border-dashboard {
+  background-color: #F3F4F6;
+}
+
+.dashboard-container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 64px auto;
+
+
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $max-width;
+  }
+
+  table {
+    max-width: $max-width;
+    color: #3d3d3d;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    background-color: white;
+    margin: 32px auto;
+
+    th {
+      padding: 16px;
+
+    }
+
+    .edit-event {
+      cursor: pointer;
+      color: $primary;
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {

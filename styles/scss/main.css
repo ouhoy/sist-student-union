@@ -740,6 +740,40 @@ footer .footer-nav-container .footer-nav .links a:not(:last-child) {
   margin-right: 32px;
 }
 
+/*------------------DASHBOARD PAGE------------------*/
+.border-dashboard {
+  background-color: #F3F4F6;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 64px auto;
+}
+.dashboard-container .dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 940px;
+}
+.dashboard-container table {
+  max-width: 940px;
+  color: #3d3d3d;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background-color: white;
+  margin: 32px auto;
+}
+.dashboard-container table th {
+  padding: 16px;
+}
+.dashboard-container table .edit-event {
+  cursor: pointer;
+  color: #78B42B;
+}
+
 @media screen and (max-width: 1024px) {
   h4 {
     font-size: 24px;
