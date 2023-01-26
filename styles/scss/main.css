@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -211,6 +215,10 @@ header .head-cta a {
   display: none;
 }
 
+.about-container {
+  max-width: 940px;
+}
+
 main {
   margin-right: auto;
   margin-left: auto;
@@ -231,7 +239,6 @@ main .events-container .article-body {
   margin-top: 32px;
 }
 main .events-container .article-body h6 {
-  line-height: 16px;
   margin-bottom: 16px;
 }
 main .events-container .article-body p {
@@ -812,27 +819,83 @@ form {
   background-color: white;
   margin: 32px auto;
 }
-.dashboard-container table td p {
+.dashboard-container table .event-title-dash {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.dashboard-container table td .event-status {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0E203A;
-  background-color: #DFE6F2;
+  color: #594700;
+  background-color: #FFF7D9;
   padding: 4px 16px;
-  margin: 9px 0px;
+  margin: 12px 0px;
   border-radius: 32px;
   font-size: 14px;
 }
-.dashboard-container table td p[is-pending] {
+.dashboard-container table td .event-status[is-pending] {
   color: #2A3F0F;
   background-color: #EBF4DF;
+}
+.dashboard-container table .delete {
+  color: #541314 !important;
+  background-color: #FDE1E1 !important;
+  transition: all 0.2s ease-in-out;
+}
+.dashboard-container table .delete:active, .dashboard-container table .delete:focus {
+  transform: scale(0.99);
+}
+.dashboard-container table .edit {
+  color: #0B2973 !important;
+  background-color: #E8EFFF !important;
+  transition: all 0.2s ease-in-out;
+}
+.dashboard-container table .edit:active, .dashboard-container table .edit:focus {
+  transform: scale(0.95);
+  background-color: #a6c2ff !important;
 }
 .dashboard-container table th {
   padding: 16px;
 }
-.dashboard-container table .edit-event {
-  cursor: pointer;
-  color: #78B42B;
+
+.about-container {
+  margin: 64px auto;
+  width: 940px;
+}
+.about-container p {
+  color: #3d3d3d;
+}
+.about-container img {
+  width: 300px;
+}
+.about-container .about-dev {
+  margin: 24px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.about-container .dev-links p {
+  margin: 16px 0;
+}
+.about-container .dev-links .git-hub {
+  color: white;
+  background-color: black;
+  padding: 8px 16px;
+  border-radius: 32px;
+  font-size: 14px;
+  line-height: 14px;
+  margin-right: 8px;
+}
+.about-container .dev-links .linked-in {
+  color: white;
+  background-color: #1583ff;
+  padding: 8px 16px;
+  border-radius: 32px;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -864,7 +927,6 @@ form {
     margin-top: 32px;
   }
   main .events-container .article-body h6 {
-    line-height: 16px;
     margin-bottom: 16px;
   }
   main .events-container .article-body p {
@@ -949,7 +1011,6 @@ form {
     margin-top: 32px;
   }
   main .events-container .article-body h6 {
-    line-height: 16px;
     margin-bottom: 16px;
   }
   main .events-container .article-body p {

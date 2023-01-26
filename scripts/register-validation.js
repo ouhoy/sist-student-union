@@ -44,8 +44,8 @@ const backToStepTwo = $(".back-to-step-2")
 const doneBtn = $(".done-btn");
 
 stepOneBtn.addEventListener("click", function (e) {
-
     e.preventDefault()
+
 
     if (!nameValidation(firstName.value, "first name")) return;
     if (!nameValidation(lastName.value, "last name")) return;
@@ -117,8 +117,8 @@ backToStepOne.addEventListener("click", function (e) {
 
 
 // Step 3
-stepThreeBtn.addEventListener("click", function (e) {
-    e.preventDefault()
+stepThreeBtn.addEventListener("click", function () {
+
 
     if (phoneNumber.value.length > 15) {
         return alert("The phone is too loong! Should not exceed 15 integers.")

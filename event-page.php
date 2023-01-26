@@ -1,3 +1,26 @@
+<?php
+
+session_start();
+$mysqli = require __DIR__ . "/includes/db.php";
+
+
+
+if (isset($_GET["event-id"])) {
+
+    $sql = "SELECT * FROM event_details WHERE event_id = {$_GET["event-id"]}";
+    $result = $mysqli->query($sql);
+    $event = $result->fetch_assoc();
+
+}
+
+
+else {
+    header("Location: 404.php");
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +38,7 @@
 <div class="nav-container">
     <nav>
         <div class="logo">
-            <a href="./index.html">
+            <a href="index.php">
                 <img
                         src="./assets/icons/SIST Events Logo.svg"
                         alt="SIST Events Logo"
@@ -25,13 +48,13 @@
         </div>
         <div class="links-holder">
             <div class="links hide-for-tablet">
-                <a href="./index.html">Home</a>
-                <a href="#">About</a>
-                <a href="./events.html">Events</a>
+                <a href="index.php">Home</a>
+                <a href="./about.php">About</a>
+                <a href="events.php">Events</a>
             </div>
             <div class="nav-cta">
-                <a href="./login-page.html">Login</a>
-                <button onclick="window.location.href = './register.html'">Get Started</button>
+                <a href="login-page.php">Login</a>
+                <button onclick="window.location.href = 'register.php'">Get Started</button>
             </div>
             <div class="ham-menu show-for-tablet">
                 <img src="assets/icons/ham-menu.svg" alt="menu icon">
@@ -41,34 +64,35 @@
 </div>
 <main>
     <div class="event-header">
-        <a class="event-category"><span>#</span>Outdoor Activity</a>
-        <!--        <a href="#" class="secondary-btn">Outdoor Activity</a>-->
-        <h4 class="event-title">Unleash Your Inner Explorer: Join Our Annual School Outdoor Adventure and Camping
-            Trip</h4>
+        <a class="event-category"><span>#</span><?php echo $event["event_category"] ?></a>
+
+        <h4 class="event-title"><?php echo $event["event_name"] ?></h4>
         <div class="event-author-details">
             <img src="./assets/images/abdallah_dahmou_avatar.jpg" alt="The author Abdallah Dahmou" srcset="">
             <div class="date-and-author">
-                <p class="event-author-name">Abdallah Dahmou</p>
+
+                <p class="event-author-name">
+                    <?php  $sql = "SELECT * FROM users WHERE user_id = {$event["user_id"]}";
+                    $result = $mysqli->query($sql);
+                    $user = $result->fetch_assoc(); ?>
+                    By <?php echo $user["first_name"] ?> <?php echo $user["last_name"] ?></p>
+
                 <p class="post-date">16 JAN 2023</p>
             </div>
         </div>
         <div class="event-body">
             <div>
-                <!-- TODO screen set: img should be responsive -->
-                <img src="./assets/images/SIST%20Outside%20Activity.jpg" alt="SIST outdoor activity" srcset="">
-                <div class="event-keywords">
-                    <a href="#"><span>#</span>Party</a>
-                    <a href="#"><span>#</span>Food and Drinks</a>
-                    <a href="#"><span>#</span>Vocation</a>
 
+                <img src="<?php echo $event["image_url"] ?>" alt="SIST activity" srcset="">
+                <div class="event-keywords">
+                    <?php foreach (explode(",", $event["keywords"]) as $keyword) { ?>
+                        <a href="#"><span>#</span><?php echo $keyword ?></a>
+
+                    <?php } ?>
                 </div>
                 <div class="event-description">
                     <p>
-                        Join us for a fun-filled day of outdoor adventure at our school's annual camping trip! We'll be
-                        hiking through the beautiful woods, learning about nature and wildlife, and even trying our hand
-                        at fishing. After a day of exploration, we'll gather around the campfire to roast marshmallows
-                        and share stories. Don't forget to bring your camping gear and a sense of adventure! This is an
-                        event you won't want to miss.
+                        <?php echo $event["event_description"] ?>
                     </p>
                 </div>
             </div>
@@ -87,9 +111,9 @@
         <div class="footer-nav">
             <p>SIST © 2022 All Rights Reserved</p>
             <div class="links">
-                <a href="./index.html">Home</a>
-                <a href="./about.html">About</a>
-                <a href="./events.html">Events</a>
+                <a href="index.php">Home</a>
+                <a href="about.php">About</a>
+                <a href="events.php">Events</a>
             </div>
         </div>
     </div>

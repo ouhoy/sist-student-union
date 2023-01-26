@@ -1,3 +1,62 @@
+<?php
+
+
+if (isset($_POST['submit'])) {
+
+
+// Getting SignUp Information
+    $firstName = $_POST["first-name"];
+    $lastName = $_POST["last-name"];
+    $email = $_POST["email"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $gender = $_POST["gender"];
+    $userTitle = $_POST["user-title"];
+    $description = $_POST["description"];
+    $profileUrl = $_POST["profile-url"];
+    $phoneNumber = $_POST["phone-number"];
+    $addressOne = $_POST["address-1"];
+    $addressTwo = $_POST["address-2"];
+    $city = $_POST["city"];
+    $postCode = $_POST["post-code"];
+
+    $mysqli = require __DIR__ . "/includes/db.php";
+
+
+    $sql = "INSERT INTO users (password,username, email, title,first_name, last_name,gender, address1, address2,address3,
+                  postcode, description, telephone, profile_url)
+        VALUES ( '{$_POST["password"]}', '$username', '$email', '$userTitle', '$firstName', '$lastName', '$gender','$addressOne', '$addressTwo', '$city',
+        '$postCode', '$description', '$phoneNumber', '$profileUrl')";
+
+    $stmt = $mysqli->stmt_init();
+
+    if (!$stmt->prepare($sql)) {
+        die("SQL error: " . $mysqli->error);
+    }
+
+
+    if ($stmt->execute()) {
+
+        header("Location: signup-success.php");
+        exit;
+    } else {
+
+        if ($mysqli->errno === 1062) {
+            die("email already taken");
+            header("refresh:2url=register.php");
+
+        } else {
+            die($mysqli->error . " " . $mysqli->errno);
+        }
+    }
+
+
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +74,17 @@
 
     <link rel="stylesheet" href="./styles/scss/main.css"/>
     <script src="./scripts/register-validation.js" type="module" defer></script>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
     <title>Get Started</title>
 </head>
 <body>
 <div class="nav-container">
     <nav>
         <div class="logo">
-            <a href="./index.html">
+            <a href="index.php">
                 <img
                         src="./assets/icons/SIST Events Logo.svg"
                         alt="SIST Events Logo"
@@ -31,13 +94,13 @@
         </div>
         <div class="links-holder">
             <div class="links hide-for-tablet">
-                <a href="./index.html">Home</a>
-                <a href="#">About</a>
-                <a href="./events.html">Events</a>
+                <a href="index.php">Home</a>
+                <a href="./about.php">About</a>
+                <a href="events.php">Events</a>
             </div>
             <div class="nav-cta">
-                <a href="./login-page.html">Login</a>
-                <button onclick="window.location.href = './register.html'">Get Started</button>
+                <a href="login-page.php">Login</a>
+                <button onclick="window.location.href = 'register.php'">Get Started</button>
             </div>
             <div class="ham-menu show-for-tablet">
                 <img src="assets/icons/ham-menu.svg" alt="menu icon">
@@ -90,7 +153,7 @@
             </div>
         </div>
 
-        <form>
+        <form action="./register.php" method="post">
 
             <!-- USER DETAILS -->
             <div class="user-details">
@@ -99,24 +162,26 @@
                 <div class="first-last-name">
                     <div>
                         <label for="firstName">First name</label>
-                        <input id="firstName" type="text" aria-autocomplete="none" autocomplete="off"
+                        <input name="first-name" id="firstName" type="text" aria-autocomplete="none" autocomplete="off"
                                placeholder="john">
                     </div>
                     <div>
                         <label for="lastName">Last name</label>
-                        <input id="lastName" type="text" aria-autocomplete="none" autocomplete="off" placeholder="doe">
+                        <input name="last-name" id="lastName" type="text" aria-autocomplete="none" autocomplete="off"
+                               placeholder="doe">
                     </div>
                 </div>
 
                 <label for="email">Email</label>
-                <input id="email" type="email" aria-autocomplete="none" autocomplete="off"
+                <input name="email" id="email" type="email" aria-autocomplete="none" autocomplete="off"
                        placeholder="example@email.com">
                 <label for="username">Username</label>
-                <input id="username"  type="text" aria-autocomplete="none" autocomplete="off"
+                <input name="username" id="username" type="text" aria-autocomplete="none" autocomplete="off"
                        placeholder="username">
                 <label for="password">Password</label>
-                <input aria-autocomplete="none" id="password" type="password" autocomplete="off" placeholder="password">
-                <button class="step-one" type="submit">Continue</button>
+                <input name="password" aria-autocomplete="none" id="password" type="password" autocomplete="off"
+                       placeholder="password">
+                <button class="step-one">Continue</button>
 
             </div>
 
@@ -143,17 +208,17 @@
 
 
                 <label for="user-title">Title</label>
-                <input id="user-title" type="text" aria-autocomplete="none" autocomplete="off"
+                <input name="user-title" id="user-title" type="text" aria-autocomplete="none" autocomplete="off"
                        placeholder="example web developer">
 
                 <label for="description">Description</label>
-                <textarea id="description" placeholder="description"></textarea>
+                <textarea name="description" id="description" placeholder="description"></textarea>
 
                 <label for="profile-url">Profile link</label>
-                <input id="profile-url" type="text" aria-autocomplete="none" autocomplete="off"
+                <input name="profile-url" id="profile-url" type="text" aria-autocomplete="none" autocomplete="off"
                        placeholder="profile url">
 
-                <button class="step-two" type="submit">Continue</button>
+                <button class="step-two">Continue</button>
                 <button style="margin-top: 8px" class="tertiary-btn back-to-step-1">Go back</button>
 
             </div>
@@ -162,23 +227,24 @@
             <div class="home-address hide">
 
                 <label for="phone-number">Telephone</label>
-                <input id="phone-number" type="number" aria-autocomplete="none" autocomplete="off"
+                <input name="phone-number" id="phone-number" type="number" aria-autocomplete="none" autocomplete="off"
                        placeholder="telephone">
 
                 <label for="address-1">Address 1</label>
-                <input id="address-1" type="text" aria-autocomplete="none" autocomplete="off"
+                <input name="address-1" id="address-1" type="text" aria-autocomplete="none" autocomplete="off"
                        placeholder="street address">
                 <label for="address-2">Address 2</label>
-                <input id="address-2" type="text" aria-autocomplete="none" autocomplete="off"
+                <input name="address-2" id="address-2" type="text" aria-autocomplete="none" autocomplete="off"
                        placeholder="apartment, suite, etc">
                 <label for="city">City</label>
-                <input id="city" type="text" aria-autocomplete="none" autocomplete="off" placeholder="city">
+                <input name="city" id="city" type="text" aria-autocomplete="none" autocomplete="off" placeholder="city">
                 <label for="post-code">Postcode</label>
                 <br>
-                <input style="width: 190px" id="post-code" type="text" aria-autocomplete="none" autocomplete="off"
+                <input name="post-code" style="width: 190px" id="post-code" type="text" aria-autocomplete="none"
+                       autocomplete="off"
                        placeholder="postcode">
-
-                <button class="step-three" type="submit">Continue</button>
+                <!--                <input class="step-three" type="submit" name="submit" value="Send" class="btn btn-dark w-100 su-btn">-->
+                <button class="step-three" name="submit" type="submit">Continue</button>
                 <button style="margin-top: 8px" class="tertiary-btn back-to-step-2">Go back</button>
             </div>
 
@@ -186,7 +252,7 @@
             <div class="done hide">
                 <p style="text-align: center">You have created an account successfully.</p>
                 <p style="text-align: center">Click on this button to log in</p>
-                <button class="done-btn" onclick="window.location.href = './login-page.html'">Login</button>
+                <button class="done-btn" onclick="window.location.href = 'login-page.php'">Login</button>
             </div>
         </form>
 

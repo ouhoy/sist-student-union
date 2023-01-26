@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 //Primary
 $primary: #78B42B;
 $primary-hover: #70AA27;
@@ -282,6 +286,10 @@ header {
   display: none;
 }
 
+.about-container {
+  max-width: $max-width;
+}
+
 main {
   margin-right: auto;
   margin-left: auto;
@@ -305,7 +313,6 @@ main {
       margin-top: 32px;
 
       h6 {
-        line-height: 16px;
         margin-bottom: 16px;
       }
 
@@ -1048,22 +1055,57 @@ form {
     background-color: white;
     margin: 32px auto;
 
+    .event-title-dash {
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+    }
+
     td {
-      p {
+      .event-status {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: $secondary-darker;
-        background-color: $secondary-light-hover;
+        color: #594700;
+        background-color: #FFF7D9;
         padding: 4px 16px;
-        margin: 9px 0px;
+        margin: 12px 0px;
         border-radius: 32px;
         font-size: 14px;
       }
-      p[is-pending] {
+
+      .event-status[is-pending] {
         color: $primary-darker;
         background-color: $primary-light-hover;
       }
+    }
+
+    .delete {
+      color: #541314 !important;
+      background-color: #FDE1E1 !important;
+      transition: all 0.2s ease-in-out;
+
+      &:active, &:focus {
+        transform: scale(0.99);
+
+      }
+
+    }
+
+    .edit {
+      color: #0B2973 !important;
+      background-color: #E8EFFF !important;
+
+      transition: all 0.2s ease-in-out;
+
+      &:active, &:focus {
+        transform: scale(0.95);
+        background-color: #a6c2ff !important;
+
+      }
+
     }
 
     th {
@@ -1071,12 +1113,58 @@ form {
 
     }
 
-    .edit-event {
-      cursor: pointer;
-      color: $primary;
-    }
+    //.edit-event {
+    //  a {
+    //    color: green;
+    //  }
+    //}
   }
 
+}
+
+.about-container {
+  margin: 64px auto;
+  width: $max-width;
+
+  p {
+    color: #3d3d3d;
+  }
+
+  img {
+    width: 300px;
+  }
+
+  .about-dev {
+    margin: 24px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .dev-links {
+    p {
+      margin: 16px 0;
+    }
+    .git-hub {
+      color: white;
+      background-color: black;
+      padding: 8px 16px;
+      border-radius: 32px;
+      font-size: 14px;
+      line-height: 14px;
+      margin-right: 8px;
+    }
+
+    .linked-in {
+      color: white;
+      background-color: #1583ff;
+      padding: 8px 16px;
+      border-radius: 32px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -1118,7 +1206,7 @@ form {
         margin-top: 32px;
 
         h6 {
-          line-height: 16px;
+
           margin-bottom: 16px;
         }
 
@@ -1230,7 +1318,7 @@ form {
         margin-top: 32px;
 
         h6 {
-          line-height: 16px;
+
           margin-bottom: 16px;
         }
 

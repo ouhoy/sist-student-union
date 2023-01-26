@@ -7,13 +7,14 @@ const showEventsBtn = $(".event-btn")
 const events = $(".event", true)
 // const articleBody = $(".article-body")
 const articleTitle = $(".article-body-title")
-
+const articleText = $(".event-body-text")
+const articleImg = $(".article-img")
 
 
 window.onload = function () {
 
     const eventId = window.location.hash.split("-").at(-1)
-    // TODO: 1) If not event id return
+
     if (eventId !== "") {
         const linkedEvent = document.getElementById(eventId)
         return setEventsMenu(linkedEvent)
@@ -31,6 +32,7 @@ showEventsBtn.addEventListener("click", function () {
 
 function setEventsMenu(target) {
     articleTitle.textContent = target.querySelector("h6").textContent
+
     const eventTitle = target.querySelector("h6").textContent.replaceAll(" ", "-").toLowerCase()
     window.location.hash = eventTitle + "-" + target.id;
     events.forEach(el => {
@@ -42,7 +44,11 @@ function setEventsMenu(target) {
 eventsMenu.addEventListener("click", function (e) {
     const selectedEvent = e.target.closest(".event");
     if (!selectedEvent || selectedEvent.hasAttribute("is-active")) return;
+
+
     articleTitle.textContent = selectedEvent.querySelector("h6").textContent
+    articleText.textContent = selectedEvent.querySelector(".content").textContent
+    articleImg.src = selectedEvent.querySelector(".img").src
 
     const eventTitle = selectedEvent.querySelector("h6").textContent.replaceAll(" ", "-").toLowerCase()
     window.location.hash = eventTitle + "-" + selectedEvent.id;

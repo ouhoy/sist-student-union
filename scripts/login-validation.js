@@ -6,11 +6,12 @@ function $(id, selectAll = false) {
 
 const email = $("#email")
 const password = $("#password")
-const submitBtn = $("form button")
-
+const submitBtn = $(".login-btn-main")
+const secondBtn = $(".tertiary-btn")
 
 submitBtn.addEventListener("click", function (e) {
-    e.preventDefault()
+
+
     if (!emailValidation(email.value)) return;
     if (!password.value) {
         alert("Please enter a password!")
@@ -19,4 +20,9 @@ submitBtn.addEventListener("click", function (e) {
     }
 
     console.table({password: password.value, username: email.value})
+})
+secondBtn.addEventListener("click", function (e){
+    e.preventDefault()
+    window.location.href = "./register.php";
+
 })
